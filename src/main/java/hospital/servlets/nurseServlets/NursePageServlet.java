@@ -2,14 +2,9 @@ package hospital.servlets.nurseServlets;
 
 
 import hospital.dao.impl.PatientDataImpl;
-import hospital.dao.impl.PrescriptionDAOImpl;
-import hospital.dao.impl.UserDAOImpl;
 import hospital.entity.PatientData;
-import hospital.entity.User;
-import hospital.utils.Command;
 import hospital.utils.CommandFactory;
 import hospital.utils.ServletCommand;
-import hospital.utils.SingleTransaction;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -34,68 +29,7 @@ public class NursePageServlet extends HttpServlet {
             String url = String.valueOf(request.getRequestURL());
             ServletCommand command = CommandFactory.createCommand(url,request,response);
             command.execute(request,response);
-         /*   Command command = null;
 
-            if (url.equals("http://localhost:8000/nursePage")) {
-                command = () -> {
-                    try {
-                        User activeNurse = UserDAOImpl.findByEmailAndPass(email, password);
-                        if (activeNurse != null) {
-                            request.setAttribute("nurse", activeNurse);
-                            log.info("Active nurse:" + activeNurse.getName() + activeNurse.getSurname());
-                            List<PatientData> patients = PatientDataImpl.findNursePatients(activeNurse.getId());
-                            request.setAttribute("activePatients", patients);
-                        }
-                        log.info("Redicrecting to nurse page");
-                        getServletContext().getRequestDispatcher("/nursesPage.jsp").forward(request, response);
-                    }
-                    catch(Exception ex) {
-                        log.error("An error occured while redirecting to nurse page",ex);
-                        getServletContext().getRequestDispatcher("/error.jsp").forward(request, response);
-                    }
-                };
-            }
-            else if (url.equals("http://localhost:8000/nursePage/doPrescriptionNurse")) {
-                command = () -> {
-                    try {
-                        log.info("Prescription performing");
-                        int id = Integer.parseInt(request.getParameter("id"));
-                        int patientId = Integer.parseInt(request.getParameter("patientId"));
-                        String prescriptionClass =  PrescriptionDAOImpl.findById(id).getPrescriptionClass();
-                        log.debug("Prescription class" + prescriptionClass);
-                        if (prescriptionClass.equals("medicine")) {
-                            SingleTransaction.transfer(id,patientId);
-                        }
-                        else {
-                            PrescriptionDAOImpl.delete(id,patientId);
-                        }
-                        log.info("Prescription successfully performed");
-                        getServletContext().getRequestDispatcher("/nursePage").forward(request, response);
-                    }
-                    catch(Exception ex) {
-                        log.error("An error occured during prescription performing",ex);
-                        getServletContext().getRequestDispatcher("/error.jsp").forward(request, response);
-                    }
-                };
-            }
-            else if (url.equals("http://localhost:8000/nursePage/createNursePatients")) {
-                command = () -> {
-                    try {
-                        log.info("creating patients for nurse");
-                        int id = Integer.parseInt(request.getParameter("id"));
-                        randomPatient(id);
-                        log.info("patients have been successfully created");
-                        getServletContext().getRequestDispatcher("/nursePage").forward(request, response);
-                    }
-                    catch(Exception ex) {
-                        log.error("error occured",ex);
-                        getServletContext().getRequestDispatcher("/error.jsp").forward(request, response);
-                    }
-                };
-            }
-           if (command != null) {
-                command.execute();
-            }*/
 
     }
     public static void randomPatient(int id) {
