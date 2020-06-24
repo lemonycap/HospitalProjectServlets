@@ -23,4 +23,4 @@ Clone this repository: in your command line enter git clone https://github.com/l
        </server>
     </servers>  
     ```
-   * Run the application using **tomcat7:deploy 
+   * Run the application using **tomcat7:deploy** 
