@@ -6,22 +6,27 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<html>
+<%@ page isELIgnored="false" %>
+<c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
+<fmt:setLocale value="${language}" />
+<fmt:setBundle basename="Messages"/>
+<html lang="${language}">
 <head>
     <title>Doctor page</title>
 </head>
 <body>
-<h3> Doctor's page</h3>
-<h3> Hello, ${doctor.name} ${doctor.surname}</h3>
-<h4> Your patients:</h4>
+<h3> <fmt:message key="doctor.page" /></h3>
+<h3> <fmt:message key="greeting" /> ${doctor.name} ${doctor.surname}</h3>
+<h4> <fmt:message key="patients" /></h4>
 <table border = "1">
     <tr>
-        <th> Name </th>
-        <th> Surname </th>
-        <th> Diagnosis </th>
-        <th> Prescription history </th>
-        <th> Prescriptions </th>
+        <th> <fmt:message key="name" /> </th>
+        <th> <fmt:message key="surname" /> </th>
+        <th> <fmt:message key="diagnosis" /> </th>
+        <th> <fmt:message key="prescriptionHistory" /> </th>
+        <th> <fmt:message key="prescriptions" /> </th>
     </tr>
     <c:forEach var="patient" items="${activePatients}">
         <c:if test="${patient.patientStatus == 1}">
@@ -32,7 +37,7 @@
                 <c:if test="${patient.diagnosis == null}">
                     <form method="post" action='<c:url value="/doctorPage/createPatientDiagnosis" />' style="display:inline;">
                         <input  type = "hidden" name="id" value="${patient.patient.id}">
-                        <input type="submit" value="Establish diagnosis">
+                        <input type="submit" value="<fmt:message key="establishDiagnosis" />">
                     </form>
                 </c:if>
                     ${patient.diagnosis.name}
@@ -46,11 +51,11 @@
                 <c:if test = "${patient.currentPrescriptions.isEmpty() && patient.diagnosis != null}">
                     <form method="post" action='<c:url value="/doctorPage/createPatientPrescriptions" />' style="display:inline;">
                         <input  type = "hidden" name="id" value="${patient.patient.id}">
-                        <input type="submit" value="Make prescriptions">
+                        <input type="submit" value="<fmt:message key="makePrescriptions" />">
                     </form>
                 </c:if>
                 <c:if test = "${patient.currentPrescriptions.isEmpty() && patient.diagnosis == null}">
-                    <p> First, establish diagnosis for patient.</p>
+                    <p> <fmt:message key="firstDiagnosis" /></p>
                 </c:if>
                 <c:if test = "${!patient.currentPrescriptions.isEmpty()}">
                     <c:forEach var="prescription" items="${patient.currentPrescriptions}">
@@ -58,7 +63,7 @@
                         <form method="post" action='<c:url value="/doctorPage/doPrescriptionDoctor" />' style="display:inline;">
                             <input  type = "hidden" name="patientId" value="${patient.patient.id}">
                             <input  type = "hidden" name="id" value="${prescription.id}">
-                            <input type="submit" value="Do prescription">
+                            <input type="submit" value="<fmt:message key="doPrescription" />">
                         </form>
                     </c:forEach>
                 </c:if>
@@ -66,7 +71,7 @@
             <td>
                 <form method="post" action='<c:url value="/doctorPage/releasePatient" />' style="display:inline;">
                     <input  type = "hidden" name="id" value="${patient.patient.id}">
-                    <input type="submit" value="Release patient">
+                    <input type="submit" value="<fmt:message key="releasePatient" />">
                 </form>
             </td>
         </tr>
@@ -76,12 +81,13 @@
 <c:if test = "${activePatients.size() < 5}">
     <form method="post" action='<c:url value="/doctorPage/createPatients" />' style="display:inline;">
         <input  type = "hidden" name="id" value="${doctor.id}">
-        <input type="submit" value="Find patients">
+        <input type="submit" value="<fmt:message key="findPatients"/>">
     </form>
 </c:if>
 <c:if test = "${activePatients.size() >= 5}">
-    You have max amount of patients.
+    <fmt:message key="maxNumberOfPatients" />
 </c:if>
-<a href='<c:url value="/logout" />'>Log out</a>
+<a href='<c:url value="/" />'><fmt:message key="home"/></a>
+<a href='<c:url value="/logout" />'><fmt:message key="logout" /></a>
 </body>
 </html>

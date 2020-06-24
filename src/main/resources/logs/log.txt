@@ -2116,3 +2116,38 @@ Caused by: java.lang.ClassNotFoundException: org.apache.jsp.error_jsp
 2020-06-14 18:40:46 DEBUG AuthFilter:53 - Active user is Steve Madden
 2020-06-14 18:40:46 INFO  AuthFilter:79 - User successfully loged in as a doctor
 2020-06-14 18:40:56 INFO  DoctorPageServlet:167 - no patients need a doctor right now
+2020-06-23 23:39:15 DEBUG AuthFilter:53 - Active user is Evelina Set
+2020-06-23 23:39:15 INFO  AuthFilter:83 - User successfully loged in as a nurse
+2020-06-23 23:39:32 DEBUG AuthFilter:53 - Active user is Maria Klein
+2020-06-23 23:39:32 INFO  AuthFilter:83 - User successfully loged in as a nurse
+2020-06-23 23:41:31 DEBUG AuthFilter:53 - Active user is Maria Klein
+2020-06-23 23:41:31 INFO  AuthFilter:83 - User successfully loged in as a nurse
+2020-06-23 23:42:22 DEBUG AuthFilter:53 - Active user is Maria Klein
+2020-06-23 23:42:22 INFO  AuthFilter:83 - User successfully loged in as a nurse
+2020-06-23 23:42:36 DEBUG AuthFilter:53 - Active user is Steve Madden
+2020-06-23 23:42:36 INFO  AuthFilter:79 - User successfully loged in as a doctor
+2020-06-23 23:42:46 DEBUG AuthFilter:53 - Active user is Maria Klein
+2020-06-23 23:42:46 INFO  AuthFilter:83 - User successfully loged in as a nurse
+2020-06-23 23:44:04 DEBUG AuthFilter:53 - Active user is Maria Klein
+2020-06-23 23:44:04 INFO  AuthFilter:83 - User successfully loged in as a nurse
+2020-06-24 00:20:07 DEBUG AuthFilter:53 - Active user is Sam Evans
+2020-06-24 00:20:07 INFO  AuthFilter:87 - User successfully loged in as a patient
+2020-06-24 00:20:07 INFO  PatientPageServlet:25 - Patient page
+2020-06-24 00:20:07 DEBUG PatientPageServlet:34 - Active patient isSamEvans
+2020-06-24 00:20:07 INFO  PatientPageServlet:37 - Redirecting to patientPage.jsp
+2020-06-24 00:21:57 DEBUG AuthFilter:53 - Active user is Sam Evans
+2020-06-24 00:21:57 INFO  AuthFilter:87 - User successfully loged in as a patient
+2020-06-24 00:21:57 INFO  PatientPageServlet:25 - Patient page
+2020-06-24 00:21:57 DEBUG PatientPageServlet:34 - Active patient isSamEvans
+2020-06-24 00:21:57 INFO  PatientPageServlet:37 - Redirecting to patientPage.jsp
+2020-06-24 00:22:06 DEBUG AuthFilter:53 - Active user is Steve Madden
+2020-06-24 00:22:06 INFO  AuthFilter:79 - User successfully loged in as a doctor
+2020-06-24 00:22:19 DEBUG AuthFilter:53 - Active user is Maria Klein
+2020-06-24 00:22:19 INFO  AuthFilter:83 - User successfully loged in as a nurse
+2020-06-24 00:22:29 DEBUG AuthFilter:53 - Active user is Steve Madden
+2020-06-24 00:22:29 INFO  AuthFilter:79 - User successfully loged in as a doctor
+2020-06-24 00:55:43 DEBUG AuthFilter:53 - Active user is Steve Madden
+2020-06-24 00:55:43 INFO  AuthFilter:79 - User successfully loged in as a doctor
+2020-06-24 00:55:46 INFO  DoctorPageServlet:55 - no patients need a doctor right now
+2020-06-24 00:56:04 INFO  AuthFilter:43 - User already logged in
+2020-06-24 00:56:04 INFO  AuthFilter:79 - User successfully loged in as a doctor

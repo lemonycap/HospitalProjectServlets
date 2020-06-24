@@ -6,7 +6,13 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page isELIgnored="false" %>
+<c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
+<fmt:setLocale value="${language}" />
+<fmt:setBundle basename="Messages"/>
+<html lang="${language}">
 <head>
     <title>Registration</title>
 </head>
@@ -17,22 +23,22 @@
 <div class = "container">
     <form method="post" action=/registration>
 
-        <label>Position</label><br>
+        <label><fmt:message key="reg.position" /></label><br>
         <select name = "role">
-            <option selected value = "doctor">Doctor</option>
-            <option value = "nurse">Nurse</option>
-            <option value = "patient">Patient</option>
+            <option selected value = "doctor"><fmt:message key="reg.doctor" /></option>
+            <option value = "nurse"><fmt:message key="reg.nurse" /></option>
+            <option value = "patient"><fmt:message key="reg.patient" /></option>
         </select>
-        <label>Name</label><br>
+        <label><fmt:message key="name" /></label><br>
         <input type="text" name="name">
-        <label>Surname</label><br>
+        <label><fmt:message key="surname" /></label><br>
         <input type="text" name="surname" class = "surname">
-        <label>E-mail</label><br>
+        <label><fmt:message key="email" /></label><br>
         <input type="text" name="email">
-        <label>Password</label><br>
+        <label><fmt:message key="password" /></label><br>
         <input type="text" name="password">
 
-        <input type="submit" value="OK" name="Ok" class = "ok"><br>
+        <input type="submit" value="<fmt:message key="send" />" name="Ok" class = "ok"><br>
     </form>
 </div>
 </body>

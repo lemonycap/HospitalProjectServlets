@@ -1,6 +1,5 @@
 package hospital.utils;
 
-import hospital.utils.commands.doctorcommands.*;
 import hospital.utils.doctorcommands.*;
 import hospital.utils.nursecommands.NurseDoPrescrCommand;
 import hospital.utils.nursecommands.NurseFindPatientsCommand;

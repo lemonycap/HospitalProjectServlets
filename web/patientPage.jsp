@@ -8,44 +8,56 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<html>
+<%@ page isELIgnored="false" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
+<fmt:setLocale value="${language}" />
+<fmt:setBundle basename="Messages"/>
+<html lang="${language}">
 <head>
     <title>Patient page</title>
 </head>
 <body>
-<h3> Patient's page</h3>
-<h4> Hello, ${patient.patient.name} ${patient.patient.surname} </h4>
+<h3> <fmt:message key="patient.profile" /></h3>
+<h4>  <fmt:message key="greeting" /> ${patient.patient.name} ${patient.patient.surname} </h4>
 <div class = "container">
 <c:if test="${patient.patientStatus == 1}">
-    <h4>Your doctor: ${patient.doctor.name}   ${patient.doctor.surname}</h4>
+    <h4> <fmt:message key="patient.doctor" /> ${patient.doctor.name}   ${patient.doctor.surname}</h4>
     <c:if test = "${patient.doctor == null}">
-        <p>No doctor at the moment</p>
+        <p><fmt:message key="patient.noDoctor" /></p>
     </c:if>
-    <h4>Your nurse: ${patient.nurse.name} ${patient.nurse.surname} </h4>
+    <h4> <fmt:message key="patient.nurse" /> ${patient.nurse.name} ${patient.nurse.surname} </h4>
     <c:if test = "${patient.doctor == null}">
-        <p>No nurse at the moment</p>
+        <p><fmt:message key="patient.noNurse" /></p>
     </c:if>
-    <h4> Your diagnosis:  ${patient.diagnosis.name}</h4>
+    <h4>  <fmt:message key="patient.diagnosis" /> ${patient.diagnosis.name}</h4>
     <c:if test = "${patient.diagnosis == null}">
-        <p>No diagnosis at the moment</p>
+        <p><fmt:message key="patient.noDiagnosis" /></p>
     </c:if>
-    <h4> Your history of prescriptions:</h4>
+    <h4>  <fmt:message key="patient.history" /></h4>
     <c:forEach var="prescription" items="${patient.prescriptionHistory}">
         ${prescription.name}
     </c:forEach>
-    <h4>Your prescriptions:</h4>
+    <h4> <fmt:message key="patient.prescriptions" /></h4>
     <c:if test="${patient.currentPrescriptions.isEmpty()}">
-        <p> You have no prescriptions</p>
+        <p> <fmt:message key="patient.noPrescriptions" /></p>
     </c:if>
     <c:forEach var="prescription" items="${patient.currentPrescriptions}">
         ${prescription.name}
     </c:forEach>
 </c:if>
 <c:if test="${patient.patientStatus == 0}">
-    <p> You have been released from hospital.</p>
-    <p> Your diagnosis: ${patient.diagnosis.name} </p>
+    <p> <fmt:message key="patient.released" /></p>
+    <p>  <fmt:message key="patient.diagnosis" />${patient.diagnosis.name} </p>
+    <c:if test="${!patient.currentPrescriptions.isEmpty()}">
+        <p>  <fmt:message key="patient.leftPrescr" /></p>
+    </c:if>
+    <c:forEach var="prescription" items="${patient.currentPrescriptions}">
+        ${prescription.name}
+    </c:forEach>
 </c:if>
 </div>
-<a href='<c:url value="/logout" />'>Log out</a>
+<a href='<c:url value="/" />'><fmt:message key="home"/></a>
+<a href='<c:url value="/logout" />'> <fmt:message key="logout" /></a>
 </body>
 </html>
