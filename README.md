@@ -23,4 +23,6 @@ Clone this repository: in your command line enter git clone https://github.com/l
        </server>
     </servers>  
     ```
+   * Copy your **mysql-connector** jar file to your TomcatHome/lib  
    * Run the application using **tomcat7:deploy** 
+   * Go to http://localhost:8000/
