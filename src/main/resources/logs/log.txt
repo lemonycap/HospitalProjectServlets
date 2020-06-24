@@ -2146,8 +2146,3 @@ Caused by: java.lang.ClassNotFoundException: org.apache.jsp.error_jsp
 2020-06-24 00:22:19 INFO  AuthFilter:83 - User successfully loged in as a nurse
 2020-06-24 00:22:29 DEBUG AuthFilter:53 - Active user is Steve Madden
 2020-06-24 00:22:29 INFO  AuthFilter:79 - User successfully loged in as a doctor
-2020-06-24 00:55:43 DEBUG AuthFilter:53 - Active user is Steve Madden
-2020-06-24 00:55:43 INFO  AuthFilter:79 - User successfully loged in as a doctor
-2020-06-24 00:55:46 INFO  DoctorPageServlet:55 - no patients need a doctor right now
-2020-06-24 00:56:04 INFO  AuthFilter:43 - User already logged in
-2020-06-24 00:56:04 INFO  AuthFilter:79 - User successfully loged in as a doctor
