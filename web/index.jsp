@@ -20,15 +20,17 @@
     <title>Main page</title>
   </head>
   <body>
-  <form>
-    <select id="language" name="language" onchange="submit()">
-      <option value="ru" ${language == 'ru' ? 'selected' : ''}>Russian</option>
-      <option value="en" ${language == 'en' ? 'selected' : ''}>English</option>
-    </select>
-  </form>
   <div class = "container">
   <button onclick="location.href='/login.jsp'"> <fmt:message key="login" /> </button>
     <button onclick="location.href='/registration'"><fmt:message key="registration" /></button>
+      <form>
+          <select id="language" name="language" onchange="submit()">
+              <option value="ru" ${language == 'ru' ? 'selected' : ''}>Russian</option>
+              <option value="en" ${language == 'en' ? 'selected' : ''}>English</option>
+          </select>
+      </form>
   </div>
+  <h1> <fmt:message key="hospital" />  </h1>
+  <h3> <fmt:message key="slogan" /> </h3>
   </body>
 </html>

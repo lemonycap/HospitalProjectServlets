@@ -17,6 +17,9 @@
 <head>
     <title>Patient page</title>
 </head>
+<style>
+    <%@include file='styles/patientStyle.css' %>
+</style>
 <body>
 <h3> <fmt:message key="patient.profile" /></h3>
 <h4>  <fmt:message key="greeting" /> ${patient.patient.name} ${patient.patient.surname} </h4>
@@ -57,7 +60,9 @@
     </c:forEach>
 </c:if>
 </div>
+<div class = "links">
 <a href='<c:url value="/" />'><fmt:message key="home"/></a>
 <a href='<c:url value="/logout" />'> <fmt:message key="logout" /></a>
+</div>
 </body>
 </html>

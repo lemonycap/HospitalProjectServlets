@@ -41,5 +41,6 @@
         <input type="submit" value="<fmt:message key="send" />" name="Ok" class = "ok"><br>
     </form>
 </div>
+<a href='<c:url value="/" />'><fmt:message key="home"/></a>
 </body>
 </html>

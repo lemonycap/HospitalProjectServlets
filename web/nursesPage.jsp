@@ -16,9 +16,17 @@
 <head>
     <title>Nurse page</title>
 </head>
+<style>
+    <%@include file='styles/docStyle.css' %>
+</style>
 <body>
+<a href='<c:url value="/" />'><fmt:message key="home"/></a>
+<a href='<c:url value="/logout" />'><fmt:message key="logout"/></a>
+<div class = "titles">
 <h3> Nurse's page</h3>
 <h3> <fmt:message key="greeting" /> ${nurse.name} ${nurse.surname}</h3>
+</div>
+<div class = "container">
 <h4> Your patients:</h4>
 <table border = "1">
     <tr>
@@ -67,7 +75,6 @@
 <c:if test = "${activePatients.size() >= 5}">
     <fmt:message key="maxNumberOfPatients" />
 </c:if>
-<a href='<c:url value="/" />'><fmt:message key="home"/></a>
-<a href='<c:url value="/logout" />'><fmt:message key="logout"/></a>
+</div>
 </body>
 </html>
