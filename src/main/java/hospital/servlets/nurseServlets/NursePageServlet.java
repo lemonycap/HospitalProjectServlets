@@ -2,6 +2,7 @@ package hospital.servlets.nurseServlets;
 
 
 import hospital.dao.impl.PatientDataImpl;
+import hospital.dao.impl.UserDAOImpl;
 import hospital.entity.PatientData;
 import hospital.utils.CommandFactory;
 import hospital.utils.ServletCommand;
@@ -29,24 +30,6 @@ public class NursePageServlet extends HttpServlet {
             String url = String.valueOf(request.getRequestURL());
             ServletCommand command = CommandFactory.createCommand(url,request,response);
             command.execute(request,response);
-
-
     }
-    public static void randomPatient(int id) {
-        List<PatientData> patientData = PatientDataImpl.findAllWhereNoNurse();
-        List<PatientData> existingPatients = PatientDataImpl.findNursePatients(id);
-        if (!patientData.isEmpty()) {
-            for (int i = 0; i< patientData.size(); i++) {
-                if (patientData.get(i).getPatientStatus() == 0) {
-                    patientData.remove(patientData.get(i));
-                }
-            }
-            log.debug("amount of active patients without doctor:" + patientData.size());
-            log.debug("amount of existing patients: " + existingPatients.size());
-            if (existingPatients.size() < 5) {
 
-                PatientDataImpl.updateNurse(id, patientData.get(0).getPatient().getId());
-            }
-        }
-    }
 }

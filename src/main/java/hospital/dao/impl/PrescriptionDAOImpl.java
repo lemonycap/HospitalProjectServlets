@@ -12,7 +12,7 @@ import java.util.List;
 public class PrescriptionDAOImpl {
     private static final Logger log = Logger.getLogger(PrescriptionDAOImpl.class);
 
-    public static List<Prescription> findAll() {
+    public  List<Prescription> findAll() {
         List<Prescription> result = new ArrayList<Prescription>();
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(PrescriptionQueries.FIND_ALL);
@@ -31,7 +31,7 @@ public class PrescriptionDAOImpl {
         return result;
     }
 
-    public static Prescription findById(int id) {
+    public  Prescription findById(int id) {
         Prescription prescription = null;
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(PrescriptionQueries.FIND_BY_ID);
@@ -50,7 +50,7 @@ public class PrescriptionDAOImpl {
 
 
 
-    public static List<Integer> findByPatientHistory(int id) {
+    public  List<Integer> findByPatientHistory(int id) {
         List<Integer> result = new ArrayList<Integer>();
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(PrescriptionQueries.FIND_ALL_HISTORY);
@@ -66,7 +66,7 @@ public class PrescriptionDAOImpl {
         return result;
     }
 
-    public static List<Integer> findByActivePrescriptions(int id) {
+    public  List<Integer> findByActivePrescriptions(int id) {
         List<Integer> result = new ArrayList<Integer>();
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(PrescriptionQueries.FIND_ALL_NEW);
@@ -83,7 +83,7 @@ public class PrescriptionDAOImpl {
     }
 
 
-    public static List<Prescription> findByClass(String prescriptionClass) {
+    public  List<Prescription> findByClass(String prescriptionClass) {
         List<Prescription> result = new ArrayList<Prescription>();
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(PrescriptionQueries.FIND_BY_CLASS);
@@ -103,7 +103,7 @@ public class PrescriptionDAOImpl {
         return result;
     }
 
-    public static void insertHistory(int prescriptionId, int patientId) {
+    public  void insertHistory(int prescriptionId, int patientId) {
 
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(PrescriptionQueries.INSERT_PRESCRIPTION_HISTORY);
@@ -117,7 +117,7 @@ public class PrescriptionDAOImpl {
 
     }
 
-    public static void insertNewPrescriptions(int prescriptionId, int patientId) {
+    public  void insertNewPrescriptions(int prescriptionId, int patientId) {
 
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(PrescriptionQueries.INSERT_NEW_PRESCRIPTION);
@@ -130,7 +130,7 @@ public class PrescriptionDAOImpl {
         }
     }
 
-    public static void delete(int id,int patientId) {
+    public  void delete(int id,int patientId) {
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(PrescriptionQueries.DELETE_PRESCRIPTION);
             statement.setInt(1,id);

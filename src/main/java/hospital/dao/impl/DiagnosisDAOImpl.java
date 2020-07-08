@@ -14,7 +14,7 @@ import java.util.List;
 
 public class DiagnosisDAOImpl {
     private static final Logger log = Logger.getLogger(DiagnosisDAOImpl.class);
-    public static List<Diagnosis> findAll() {
+    public  List<Diagnosis> findAll() {
         List<Diagnosis> result = new ArrayList<Diagnosis>();
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(DiagnosisQueries.FIND_ALL);
@@ -34,7 +34,7 @@ public class DiagnosisDAOImpl {
         return result;
     }
 
-    public static Diagnosis findById(int id) {
+    public  Diagnosis findById(int id) {
         Diagnosis diagnosis = null;
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(DiagnosisQueries.FIND_BY_ID);

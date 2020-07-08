@@ -12,7 +12,7 @@ import java.sql.SQLException;
 
 public class RoleDAOImpl {
     private static final Logger log = Logger.getLogger(RoleDAOImpl.class);
-    public static Role findById(int id) {
+    public  Role findById(int id) {
         Role role = null;
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(RoleQueries.FIND_BY_ID);
@@ -28,7 +28,7 @@ public class RoleDAOImpl {
         return role;
     }
 
-    public static Role findByName(String name) {
+    public  Role findByName(String name) {
         Role role = null;
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(RoleQueries.FIND_BY_NAME);

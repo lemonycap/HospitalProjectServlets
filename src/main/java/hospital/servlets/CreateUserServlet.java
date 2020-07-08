@@ -1,9 +1,10 @@
 package hospital.servlets;
 
 import hospital.dao.impl.*;
-import hospital.entity.PatientData;
 import hospital.entity.Role;
 import hospital.entity.User;
+import hospital.utils.DAOFactory;
+import hospital.utils.PatientDataManipulations;
 import org.apache.log4j.Logger;
 
 
@@ -22,6 +23,16 @@ public class CreateUserServlet extends HttpServlet {
     private static final Logger log = Logger.getLogger(CreateUserServlet.class);
 
    User user = null;
+   PatientDataManipulations patientDataManipulations;
+   DAOFactory factory;
+
+   public CreateUserServlet() {
+       this.factory = new DAOFactory();
+   }
+
+   public CreateUserServlet(DAOFactory daoFactory) {
+       this.factory = daoFactory;
+   }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -40,11 +51,13 @@ public class CreateUserServlet extends HttpServlet {
                 final String surname = req.getParameter("surname");
                 final String email = req.getParameter("email");
                 final String password = req.getParameter("password");
-                Role userRole = RoleDAOImpl.findByName(role);
+                RoleDAOImpl roleDAO = factory.createRoleDao();
+                UserDAOImpl userDAO = factory.createUserDao();
+                Role userRole = roleDAO.findByName(role);
                 User user = new User(name, surname, email, password, userRole.getId());
                 log.debug("New user: " + user.getEmail() + user.getRole().getName());
-                UserDAOImpl.insert(user);
-                PatientData.refreshPatients();
+                userDAO.insert(user);
+                patientDataManipulations.refreshPatients();
                 resp.sendRedirect(req.getContextPath() + "/");
             }
             catch (Exception ex) {

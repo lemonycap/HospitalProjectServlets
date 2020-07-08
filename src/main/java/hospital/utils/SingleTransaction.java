@@ -45,7 +45,7 @@ public class SingleTransaction {
         return connectionTo;
     }
 
-    public static void transfer(int id,int patientId) throws SQLException {
+    public  void transfer(int id,int patientId) throws SQLException {
         connectionFrom = getConnectionFrom();
         connectionTo = getConnectionTo();
         Statement stFrom = null;

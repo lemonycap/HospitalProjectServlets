@@ -2,6 +2,7 @@ package hospital.entity;
 
 import hospital.dao.impl.RoleDAOImpl;
 import hospital.utils.PasswordEncryptorSHA256;
+import hospital.utils.UserDataManipulations;
 
 import java.security.NoSuchAlgorithmException;
 
@@ -22,16 +23,20 @@ public class User {
     private String password;
     private Role role;
 
+    UserDataManipulations userDataManipulations;
+
     public User (int id, String name, String surname, String email, String password, int role) {
+        userDataManipulations = new UserDataManipulations();
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.password = password;
-        this.role = RoleDAOImpl.findById(role);
+        this.role = userDataManipulations.detectRole(role);
     }
 
     public User (String name, String surname, String email, String password, int role) {
+        userDataManipulations = new UserDataManipulations();
         this.name = name;
         this.surname = surname;
         this.email = email;
@@ -40,7 +45,7 @@ public class User {
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
-        this.role = RoleDAOImpl.findById(role);
+        this.role = userDataManipulations.detectRole(role);
     }
 
 

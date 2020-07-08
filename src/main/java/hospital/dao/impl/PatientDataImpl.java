@@ -12,7 +12,7 @@ import java.util.List;
 public class PatientDataImpl {
     private static final Logger log = Logger.getLogger(PatientDataImpl.class);
 
-    public static PatientData findByPatientId(int id) {
+    public  PatientData findByPatientId(int id) {
         PatientData patientData = null;
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(PatientDataQueries.FIND_PATIENT);
@@ -31,7 +31,7 @@ public class PatientDataImpl {
         }
         return patientData;
     }
-    public static List<PatientData> findDoctorPatients(int id) {
+    public  List<PatientData> findDoctorPatients(int id) {
         List<PatientData> result = new ArrayList<PatientData>();
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(PatientDataQueries.FIND_DOCTOR_PATIENTS);
@@ -53,7 +53,7 @@ public class PatientDataImpl {
         return result;
     }
 
-    public static List<PatientData> findNursePatients(int id) {
+    public  List<PatientData> findNursePatients(int id) {
         List<PatientData> result = new ArrayList<PatientData>();
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(PatientDataQueries.FIND_NURSE_PATIENTS);
@@ -75,7 +75,7 @@ public class PatientDataImpl {
         return result;
     }
 
-    public static void insert(int id) {
+    public  void insert(int id) {
 
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(PatientDataQueries.INSERT_PATIENT, Statement.RETURN_GENERATED_KEYS);
@@ -110,7 +110,7 @@ public class PatientDataImpl {
         return result;
     }
 
-    public static List<PatientData> findAllWhereNoDoc() {
+    public  List<PatientData> findAllWhereNoDoc() {
         List<PatientData> result = new ArrayList<PatientData>();
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(PatientDataQueries.FIND_WITHOUT_DOC);
@@ -132,7 +132,7 @@ public class PatientDataImpl {
         return result;
     }
 
-    public static List<PatientData> findAllWhereNoNurse() {
+    public  List<PatientData> findAllWhereNoNurse() {
         List<PatientData> result = new ArrayList<PatientData>();
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(PatientDataQueries.FIND_WITHOUT_NURSE);
@@ -154,7 +154,7 @@ public class PatientDataImpl {
         return result;
     }
 
-    public static void updateDoctor(int doctorId, int patientId) {
+    public  void updateDoctor(int doctorId, int patientId) {
 
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(PatientDataQueries.ADD_DOCTOR);
@@ -166,7 +166,7 @@ public class PatientDataImpl {
         }
     }
 
-    public static void updateNurse(int nurseId, int patientId) {
+    public  void updateNurse(int nurseId, int patientId) {
 
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(PatientDataQueries.ADD_NURSE);
@@ -178,7 +178,7 @@ public class PatientDataImpl {
         }
     }
 
-    public static void updateDiagnosis(int diagnosisId, int patientId) {
+    public  void updateDiagnosis(int diagnosisId, int patientId) {
 
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(PatientDataQueries.ADD_DIAGNOSIS);
@@ -191,7 +191,7 @@ public class PatientDataImpl {
     }
 
 
-    public static void updatePatientStatus(int id) {
+    public  void updatePatientStatus(int id) {
 
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(PatientDataQueries.UPDATE_PATIENT_STATUS);

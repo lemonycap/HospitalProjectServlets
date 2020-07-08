@@ -12,7 +12,7 @@ import java.util.List;
 public class UserDAOImpl {
     private static final Logger log = Logger.getLogger(UserDAOImpl.class);
 
-    public static List<User> findAll() {
+    public  List<User> findAll() {
         List<User> result = new ArrayList<User>();
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(UserQueries.FIND_ALL);
@@ -35,7 +35,7 @@ public class UserDAOImpl {
         return result;
     }
 
-    public static User findByEmailAndPass(String email, String password) {
+    public  User findByEmailAndPass(String email, String password) {
         User user = null;
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(UserQueries.FIND_BY_EMAIL_AND_PASS);
@@ -57,7 +57,7 @@ public class UserDAOImpl {
         return user;
     }
 
-    public static void insert(User user) {
+    public  void insert(User user) {
 
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(UserQueries.INSERT_USER, Statement.RETURN_GENERATED_KEYS);
@@ -75,7 +75,7 @@ public class UserDAOImpl {
 
     }
 
-    public static User findById(int id) {
+    public  User findById(int id) {
         User user = null;
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(UserQueries.FIND_BY_ID);

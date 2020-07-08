@@ -34,25 +34,4 @@ public class DoctorPageServlet extends HttpServlet {
         ServletCommand command = CommandFactory.createCommand(url,request,response);
         command.execute(request,response);
     }
-
-
-    public static void randomPatient(int id) {
-        List<PatientData> patientData = PatientDataImpl.findAllWhereNoDoc();
-        List<PatientData> existingPatients = PatientDataImpl.findDoctorPatients(id);
-        if (!patientData.isEmpty()) {
-            for (int i = 0; i< patientData.size(); i++) {
-                if (patientData.get(i).getPatientStatus() == 0) {
-                    patientData.remove(patientData.get(i));
-                }
-            }
-            log.debug("amount of active patients without doctor:" + patientData.size());
-            log.debug("amount of existing patients: " + existingPatients.size());
-            if (existingPatients.size() < 5 && !patientData.isEmpty()) {
-                PatientDataImpl.updateDoctor(id, patientData.get(0).getPatient().getId());
-            }
-        }
-        else {
-            log.info("no patients need a doctor right now");
-        }
-    }
 }

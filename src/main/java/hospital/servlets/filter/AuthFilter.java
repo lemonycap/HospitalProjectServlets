@@ -20,6 +20,8 @@ import static java.util.Objects.nonNull;
 public class AuthFilter implements Filter {
 
     private static final Logger log = Logger.getLogger(AuthFilter.class);
+    PatientDataImpl patientData = new PatientDataImpl();
+    UserDAOImpl userDAO = new UserDAOImpl();
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -41,13 +43,13 @@ public class AuthFilter implements Filter {
                     nonNull(session.getAttribute("email")) &&
                     nonNull(session.getAttribute("password"))) {
                 log.info("User already logged in");
-                User activeUser = UserDAOImpl.findByEmailAndPass(email,password);
+                User activeUser = userDAO.findByEmailAndPass(email,password);
                  sendToMenu(req, res, true,activeUser.getRole().getName());
             }
 
             else {
                 boolean loginCheck  = false;
-                User activeUser = UserDAOImpl.findByEmailAndPass(email,password);
+                User activeUser = userDAO.findByEmailAndPass(email,password);
                 if (activeUser != null) {
                     loginCheck = true;
                     log.debug("Active user is " + activeUser.getName() + " " + activeUser.getSurname());

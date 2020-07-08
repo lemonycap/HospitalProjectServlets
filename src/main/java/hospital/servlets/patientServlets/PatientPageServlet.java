@@ -4,6 +4,7 @@ import hospital.dao.impl.PatientDataImpl;
 import hospital.dao.impl.UserDAOImpl;
 import hospital.entity.PatientData;
 import hospital.entity.User;
+import hospital.utils.DAOFactory;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -19,18 +20,30 @@ import java.io.IOException;
 
 public class PatientPageServlet extends HttpServlet {
     private static final Logger log = Logger.getLogger(PatientPageServlet.class);
+
+    DAOFactory factory;
+    public PatientPageServlet () {
+        this.factory = new DAOFactory();
+    }
+
+    public PatientPageServlet(DAOFactory factory) {
+        this.factory = factory;
+    }
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
             log.info("Patient page");
+            UserDAOImpl userDAO = factory.createUserDao();
+            PatientDataImpl patientDataImpl = factory.createPatientDataDao();
             HttpSession session = request.getSession();
             String email = String.valueOf(session.getAttribute("email"));
             String password = (String.valueOf(session.getAttribute("password")));
             String url = String.valueOf(request.getRequestURL());
-            User activePatient = UserDAOImpl.findByEmailAndPass(email, password);
+            User activePatient = userDAO.findByEmailAndPass(email, password);
             if (activePatient != null) {
                 request.setAttribute("patient", activePatient);
-                PatientData patientData = PatientDataImpl.findByPatientId(activePatient.getId());
+                PatientData patientData = patientDataImpl.findByPatientId(activePatient.getId());
                 log.debug("Active patient is" + patientData.getPatient().getName() + patientData.getPatient().getSurname());
                 request.setAttribute("patient",patientData);
             }
