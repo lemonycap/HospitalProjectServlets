@@ -73,7 +73,6 @@ public class NurseFindPatientsCommandTest {
         Mockito.when(request.getParameter("id")).thenReturn(String.valueOf(id));
         when(daoFactory.createPatientDataDao()).thenReturn(patientData);
         when(patientData.findAllWhereNoNurse()).thenReturn(list);
-        when(patientData.findNursePatients(user.getId())).thenReturn(activeList);
         doNothing().when(patientData).updateNurse(any(Integer.class), any(Integer.class));
         when(request.getServletContext()).thenReturn(context);
         when(context.getRequestDispatcher("/nursePage")).thenReturn(dispatcher);
@@ -84,9 +83,6 @@ public class NurseFindPatientsCommandTest {
     @Test (expected = Exception.class)
     public void exceptionExecute() throws  ServletException,IOException {
         Integer integer = null;
-        when(daoFactory.createPatientDataDao()).thenReturn(patientData);
-        when(patientData.findAllWhereNoNurse()).thenReturn(list);
-        when(patientData.findNursePatients(user.getId())).thenReturn(activeList);
         when(request.getServletContext()).thenReturn(context);
         Mockito.when(request.getParameter("id")).thenReturn(String.valueOf(integer));
         nurseFindPatientsCommand.execute(request,response);

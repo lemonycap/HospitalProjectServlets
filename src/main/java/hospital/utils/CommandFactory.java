@@ -4,42 +4,45 @@ import hospital.utils.doctorcommands.*;
 import hospital.utils.nursecommands.NurseDoPrescrCommand;
 import hospital.utils.nursecommands.NurseFindPatientsCommand;
 import hospital.utils.nursecommands.NursePageCommand;
+import org.apache.logging.log4j.core.net.UrlConnectionFactory;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import static hospital.utils.URLBase.*;
+
 public class CommandFactory {
-    public static ServletCommand createCommand(String url, HttpServletRequest request, HttpServletResponse response)
+    public static ServletCommand createCommand(String url)
     {
         ServletCommand command = null;
-        switch (url) {
-            case ("http://localhost:8000/nursePage"):
+
+        switch (URLBase.getValue(url)) {
+            case NURSE_PAGE:
                 command = new NursePageCommand();
                 break;
-
-            case ("http://localhost:8000/nursePage/doPrescriptionNurse"):
+            case DO_PRESCR_NURSE:
                 command = new NurseDoPrescrCommand();
                 break;
 
-            case ("http://localhost:8000/nursePage/createNursePatients"):
+            case CREATE_NURSE_PATIENTS:
                 command = new NurseFindPatientsCommand();
                 break;
-            case ("http://localhost:8000/doctorPage"):
+            case DOCTOR_PAGE:
                 command = new DoctorPageCommand();
                 break;
-            case ("http://localhost:8000/doctorPage/createPatientDiagnosis"):
+            case CREATE_DIAGNOSIS:
                 command = new CreateDiagnosisCommand();
                 break;
-            case ("http://localhost:8000/doctorPage/createPatientPrescriptions"):
+            case CREATE_PRESCR:
                 command = new CreatePrescriptionsCommand();
                 break;
-            case ("http://localhost:8000/doctorPage/doPrescriptionDoctor"):
+            case DO_PRESCR_DOCTOR:
                 command = new DoPrescriptionCommand();
                 break;
-            case ("http://localhost:8000/doctorPage/releasePatient"):
+            case RELEASE_PATIENT:
                 command = new ReleasePatientCommand();
                 break;
-            case ("http://localhost:8000/doctorPage/createPatients"):
+            case CREATEPATIENTSDOC:
                 command = new CreatePatientsCommand();
                 break;
         }

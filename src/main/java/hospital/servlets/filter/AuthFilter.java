@@ -33,8 +33,8 @@ public class AuthFilter implements Filter {
             final HttpServletRequest req = (HttpServletRequest) request;
             final HttpServletResponse res = (HttpServletResponse) response;
 
-            final String email = req.getParameter("email");
-            final String password = PasswordEncryptorSHA256.encryptPasswordWithSHA256(req.getParameter("password"));
+            final String email = String.valueOf(req.getParameter("email"));
+            final String password = String.valueOf(req.getParameter("password"));
 
             final HttpSession session = req.getSession();
 
@@ -43,13 +43,15 @@ public class AuthFilter implements Filter {
                     nonNull(session.getAttribute("email")) &&
                     nonNull(session.getAttribute("password"))) {
                 log.info("User already logged in");
-                User activeUser = userDAO.findByEmailAndPass(email,password);
+                String login = String.valueOf(session.getAttribute("email"));
+                String pass = String.valueOf(session.getAttribute("password"));
+                User activeUser = userDAO.findByEmailAndPass(login,PasswordEncryptorSHA256.encryptPasswordWithSHA256(pass));
                  sendToMenu(req, res, true,activeUser.getRole().getName());
             }
 
             else {
                 boolean loginCheck  = false;
-                User activeUser = userDAO.findByEmailAndPass(email,password);
+                User activeUser = userDAO.findByEmailAndPass(email,PasswordEncryptorSHA256.encryptPasswordWithSHA256(password));
                 if (activeUser != null) {
                     loginCheck = true;
                     log.debug("Active user is " + activeUser.getName() + " " + activeUser.getSurname());

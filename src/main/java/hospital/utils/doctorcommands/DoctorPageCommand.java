@@ -5,6 +5,7 @@ import hospital.dao.impl.UserDAOImpl;
 import hospital.entity.PatientData;
 import hospital.entity.User;
 import hospital.utils.DAOFactory;
+import hospital.utils.PasswordEncryptorSHA256;
 import hospital.utils.ServletCommand;
 import org.apache.log4j.Logger;
 
@@ -35,7 +36,7 @@ public class DoctorPageCommand implements ServletCommand {
             HttpSession session = request.getSession();
             String email = String.valueOf(session.getAttribute("email"));
             String password = (String.valueOf(session.getAttribute("password")));
-            User activeDoctor = userDAO.findByEmailAndPass(email, password);
+            User activeDoctor = userDAO.findByEmailAndPass(email, PasswordEncryptorSHA256.encryptPasswordWithSHA256(password));
             if (activeDoctor != null) {
                 request.setAttribute("doctor", activeDoctor);
                 log.debug("Active doctor is: " + activeDoctor.getName() + " " + activeDoctor.getSurname());

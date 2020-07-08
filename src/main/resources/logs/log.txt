@@ -3520,3 +3520,1472 @@ java.lang.NullPointerException
 2020-07-08 17:46:24 INFO  DoPrescriptionCommand:40 - Prescriptions performed successfully
 2020-07-08 17:46:24 DEBUG DoctorPageCommand:41 - Active doctor is: Steve Madden
 2020-07-08 17:46:24 INFO  DoctorPageCommand:45 - redirecting to doctor page
+2020-07-08 18:01:54 INFO  CreatePatientsCommand:28 - Creating patients for doctor
+2020-07-08 18:01:54 ERROR CreatePatientsCommand:34 - An error occured while creating patients for doctor
+java.lang.NumberFormatException: For input string: "null"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:658)
+	at java.base/java.lang.Integer.parseInt(Integer.java:776)
+	at hospital.utils.doctorcommands.CreatePatientsCommand.execute(CreatePatientsCommand.java:29)
+	at hospital.utils.doctorcommands.CreatePatientsCommandTest.exceptionExecute(CreatePatientsCommandTest.java:98)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 18:01:54 INFO  CreatePatientsCommand:28 - Creating patients for doctor
+2020-07-08 18:01:54 INFO  RandomPatient:56 - no patients need a doctor right now
+2020-07-08 18:01:54 INFO  CreatePatientsCommand:31 - Patients have been created.
+2020-07-08 18:01:54 ERROR CreatePatientsCommand:34 - An error occured while creating patients for doctor
+java.lang.NullPointerException
+	at hospital.utils.doctorcommands.CreatePatientsCommand.execute(CreatePatientsCommand.java:32)
+	at hospital.utils.doctorcommands.CreatePatientsCommandTest.execute(CreatePatientsCommandTest.java:86)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 18:02:43 INFO  CreatePatientsCommand:28 - Creating patients for doctor
+2020-07-08 18:02:43 ERROR CreatePatientsCommand:34 - An error occured while creating patients for doctor
+java.lang.NumberFormatException: For input string: "null"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:658)
+	at java.base/java.lang.Integer.parseInt(Integer.java:776)
+	at hospital.utils.doctorcommands.CreatePatientsCommand.execute(CreatePatientsCommand.java:29)
+	at hospital.utils.doctorcommands.CreatePatientsCommandTest.exceptionExecute(CreatePatientsCommandTest.java:98)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 18:02:43 INFO  CreatePatientsCommand:28 - Creating patients for doctor
+2020-07-08 18:02:43 INFO  RandomPatient:56 - no patients need a doctor right now
+2020-07-08 18:02:43 INFO  CreatePatientsCommand:31 - Patients have been created.
+2020-07-08 18:03:24 INFO  CreatePatientsCommand:28 - Creating patients for doctor
+2020-07-08 18:03:24 ERROR CreatePatientsCommand:34 - An error occured while creating patients for doctor
+java.lang.NumberFormatException: For input string: "null"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:658)
+	at java.base/java.lang.Integer.parseInt(Integer.java:776)
+	at hospital.utils.doctorcommands.CreatePatientsCommand.execute(CreatePatientsCommand.java:29)
+	at hospital.utils.doctorcommands.CreatePatientsCommandTest.exceptionExecute(CreatePatientsCommandTest.java:94)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 18:03:24 INFO  CreatePatientsCommand:28 - Creating patients for doctor
+2020-07-08 18:03:24 INFO  RandomPatient:56 - no patients need a doctor right now
+2020-07-08 18:03:24 INFO  CreatePatientsCommand:31 - Patients have been created.
+2020-07-08 18:03:52 INFO  NurseFindPatientsCommand:27 - creating patients for nurse
+2020-07-08 18:03:52 DEBUG RandomPatient:31 - amount of active patients without doctor:1
+2020-07-08 18:03:52 DEBUG RandomPatient:32 - amount of existing patients: 0
+2020-07-08 18:03:52 INFO  NurseFindPatientsCommand:30 - patients have been successfully created
+2020-07-08 18:04:06 INFO  NurseFindPatientsCommand:27 - creating patients for nurse
+2020-07-08 18:04:06 ERROR NurseFindPatientsCommand:34 - error occured
+java.lang.NumberFormatException: For input string: "null"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:658)
+	at java.base/java.lang.Integer.parseInt(Integer.java:776)
+	at hospital.utils.nursecommands.NurseFindPatientsCommand.execute(NurseFindPatientsCommand.java:28)
+	at hospital.utils.nursecommands.NurseFindPatientsCommandTest.exceptionExecute(NurseFindPatientsCommandTest.java:92)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 18:04:06 INFO  NurseFindPatientsCommand:27 - creating patients for nurse
+2020-07-08 18:04:06 DEBUG RandomPatient:31 - amount of active patients without doctor:1
+2020-07-08 18:04:06 DEBUG RandomPatient:32 - amount of existing patients: 0
+2020-07-08 18:04:06 INFO  NurseFindPatientsCommand:30 - patients have been successfully created
+2020-07-08 18:06:32 INFO  NurseFindPatientsCommand:27 - creating patients for nurse
+2020-07-08 18:06:32 ERROR NurseFindPatientsCommand:34 - error occured
+java.lang.NumberFormatException: For input string: "null"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:658)
+	at java.base/java.lang.Integer.parseInt(Integer.java:776)
+	at hospital.utils.nursecommands.NurseFindPatientsCommand.execute(NurseFindPatientsCommand.java:28)
+	at hospital.utils.nursecommands.NurseFindPatientsCommandTest.exceptionExecute(NurseFindPatientsCommandTest.java:89)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 18:06:33 INFO  NurseFindPatientsCommand:27 - creating patients for nurse
+2020-07-08 18:06:33 DEBUG RandomPatient:31 - amount of active patients without doctor:1
+2020-07-08 18:06:33 DEBUG RandomPatient:32 - amount of existing patients: 0
+2020-07-08 18:06:33 INFO  NurseFindPatientsCommand:30 - patients have been successfully created
+2020-07-08 18:06:53 INFO  NurseFindPatientsCommand:27 - creating patients for nurse
+2020-07-08 18:06:53 ERROR NurseFindPatientsCommand:34 - error occured
+java.lang.NumberFormatException: For input string: "null"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:658)
+	at java.base/java.lang.Integer.parseInt(Integer.java:776)
+	at hospital.utils.nursecommands.NurseFindPatientsCommand.execute(NurseFindPatientsCommand.java:28)
+	at hospital.utils.nursecommands.NurseFindPatientsCommandTest.exceptionExecute(NurseFindPatientsCommandTest.java:88)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 18:06:53 INFO  NurseFindPatientsCommand:27 - creating patients for nurse
+2020-07-08 18:06:53 DEBUG RandomPatient:31 - amount of active patients without doctor:1
+2020-07-08 18:06:53 DEBUG RandomPatient:32 - amount of existing patients: 0
+2020-07-08 18:06:53 INFO  NurseFindPatientsCommand:30 - patients have been successfully created
+2020-07-08 18:07:09 INFO  CreatePatientsCommand:28 - Creating patients for doctor
+2020-07-08 18:07:09 ERROR CreatePatientsCommand:34 - An error occured while creating patients for doctor
+java.lang.NumberFormatException: For input string: "null"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:658)
+	at java.base/java.lang.Integer.parseInt(Integer.java:776)
+	at hospital.utils.doctorcommands.CreatePatientsCommand.execute(CreatePatientsCommand.java:29)
+	at hospital.utils.doctorcommands.CreatePatientsCommandTest.exceptionExecute(CreatePatientsCommandTest.java:94)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 18:07:09 INFO  CreatePatientsCommand:28 - Creating patients for doctor
+2020-07-08 18:07:09 INFO  RandomPatient:56 - no patients need a doctor right now
+2020-07-08 18:07:09 INFO  CreatePatientsCommand:31 - Patients have been created.
+2020-07-08 18:08:49 INFO  CreatePatientsCommand:28 - Creating patients for doctor
+2020-07-08 18:08:49 ERROR CreatePatientsCommand:34 - An error occured while creating patients for doctor
+java.lang.NumberFormatException: For input string: "null"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:658)
+	at java.base/java.lang.Integer.parseInt(Integer.java:776)
+	at hospital.utils.doctorcommands.CreatePatientsCommand.execute(CreatePatientsCommand.java:29)
+	at hospital.utils.doctorcommands.CreatePatientsCommandTest.exceptionExecute(CreatePatientsCommandTest.java:94)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 18:08:49 INFO  CreatePatientsCommand:28 - Creating patients for doctor
+2020-07-08 18:08:49 DEBUG RandomPatient:49 - amount of active patients without doctor:1
+2020-07-08 18:08:49 DEBUG RandomPatient:50 - amount of existing patients: 0
+2020-07-08 18:08:49 INFO  CreatePatientsCommand:31 - Patients have been created.
+2020-07-08 18:09:15 INFO  CreatePatientsCommand:28 - Creating patients for doctor
+2020-07-08 18:09:15 ERROR CreatePatientsCommand:34 - An error occured while creating patients for doctor
+java.lang.NumberFormatException: For input string: "null"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:658)
+	at java.base/java.lang.Integer.parseInt(Integer.java:776)
+	at hospital.utils.doctorcommands.CreatePatientsCommand.execute(CreatePatientsCommand.java:29)
+	at hospital.utils.doctorcommands.CreatePatientsCommandTest.exceptionExecute(CreatePatientsCommandTest.java:93)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 18:09:15 INFO  CreatePatientsCommand:28 - Creating patients for doctor
+2020-07-08 18:09:15 DEBUG RandomPatient:49 - amount of active patients without doctor:1
+2020-07-08 18:09:15 DEBUG RandomPatient:50 - amount of existing patients: 0
+2020-07-08 18:09:15 INFO  CreatePatientsCommand:31 - Patients have been created.
+2020-07-08 18:15:51 INFO  DoPrescriptionCommand:29 - Prescriptions performing
+2020-07-08 18:15:51 ERROR DoPrescriptionCommand:43 - An error occured while prescription performing:
+java.lang.NullPointerException
+	at hospital.utils.doctorcommands.DoPrescriptionCommand.execute(DoPrescriptionCommand.java:32)
+	at hospital.utils.doctorcommands.DoPrescriptionCommandTest.exceptionExecute(DoPrescriptionCommandTest.java:115)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 18:15:51 INFO  DoPrescriptionCommand:29 - Prescriptions performing
+2020-07-08 18:15:51 DEBUG DoPrescriptionCommand:33 - Prescription class isoperations
+2020-07-08 18:15:51 INFO  DoPrescriptionCommand:40 - Prescriptions performed successfully
+2020-07-08 18:15:51 INFO  DoPrescriptionCommand:29 - Prescriptions performing
+2020-07-08 18:15:51 DEBUG DoPrescriptionCommand:33 - Prescription class ismedicine
+2020-07-08 18:15:51 INFO  DoPrescriptionCommand:40 - Prescriptions performed successfully
+2020-07-08 18:20:17 INFO  DoPrescriptionCommand:29 - Prescriptions performing
+2020-07-08 18:20:17 DEBUG DoPrescriptionCommand:33 - Prescription class isoperations
+2020-07-08 18:20:17 INFO  DoPrescriptionCommand:40 - Prescriptions performed successfully
+2020-07-08 18:20:17 INFO  DoPrescriptionCommand:29 - Prescriptions performing
+2020-07-08 18:20:17 DEBUG DoPrescriptionCommand:33 - Prescription class ismedicine
+2020-07-08 18:20:17 INFO  DoPrescriptionCommand:40 - Prescriptions performed successfully
+2020-07-08 18:21:41 INFO  DoPrescriptionCommand:29 - Prescriptions performing
+2020-07-08 18:21:41 DEBUG DoPrescriptionCommand:33 - Prescription class isoperations
+2020-07-08 18:21:41 INFO  DoPrescriptionCommand:40 - Prescriptions performed successfully
+2020-07-08 18:21:41 INFO  DoPrescriptionCommand:29 - Prescriptions performing
+2020-07-08 18:21:41 DEBUG DoPrescriptionCommand:33 - Prescription class ismedicine
+2020-07-08 18:21:41 INFO  DoPrescriptionCommand:40 - Prescriptions performed successfully
+2020-07-08 18:25:12 DEBUG DoctorPageCommand:41 - Active doctor is: Ben Smith
+2020-07-08 18:25:12 INFO  DoctorPageCommand:45 - redirecting to doctor page
+2020-07-08 18:25:12 INFO  DoctorPageCommand:45 - redirecting to doctor page
+2020-07-08 18:25:12 ERROR DoctorPageCommand:48 - An error occured at the time of redirecting to doctor page
+java.lang.NullPointerException
+	at hospital.utils.doctorcommands.DoctorPageCommand.execute(DoctorPageCommand.java:46)
+	at hospital.utils.doctorcommands.DoctorPageCommandTest.executeIfUserIsNull(DoctorPageCommandTest.java:102)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 18:35:44 INFO  CreateDiagnosisCommand:32 - Diagnosis establishment method
+2020-07-08 18:35:44 DEBUG CreateDiagnosisCommand:37 - Patient is: Steve Madden
+2020-07-08 18:35:44 INFO  CreateDiagnosisCommand:41 - Diagnosis successfuly established
+2020-07-08 18:37:48 INFO  CreateDiagnosisCommand:32 - Diagnosis establishment method
+2020-07-08 18:38:00 INFO  CreateDiagnosisCommand:32 - Diagnosis establishment method
+2020-07-08 18:38:30 INFO  CreateDiagnosisCommand:32 - Diagnosis establishment method
+2020-07-08 18:38:45 INFO  CreateDiagnosisCommand:32 - Diagnosis establishment method
+2020-07-08 22:23:05 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:23:05 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 22:23:05 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-08 22:23:05 ERROR ReleasePatientCommand:48 - An error occured while patient's release procedure:
+java.lang.NullPointerException
+	at hospital.utils.doctorcommands.ReleasePatientCommand.execute(ReleasePatientCommand.java:46)
+	at hospital.utils.doctorcommands.ReleasePatientCommandTest.executeReleasePatient(ReleasePatientCommandTest.java:86)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 22:23:05 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:23:05 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 22:23:05 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-08 22:23:05 ERROR ReleasePatientCommand:48 - An error occured while patient's release procedure:
+java.lang.NullPointerException
+	at hospital.utils.doctorcommands.ReleasePatientCommand.execute(ReleasePatientCommand.java:46)
+	at hospital.utils.doctorcommands.ReleasePatientCommandTest.cannotReleasePatientTest(ReleasePatientCommandTest.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 22:23:49 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:23:49 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 22:23:49 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-08 22:23:49 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:23:49 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 22:23:49 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-08 22:24:29 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:24:29 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 22:24:29 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-08 22:24:42 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:24:42 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 22:25:22 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-08 22:25:28 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:25:28 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 22:25:58 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-08 22:26:03 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:26:03 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 22:26:03 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-08 22:27:30 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:33:40 INFO  CreatePatientsCommand:28 - Creating patients for doctor
+2020-07-08 22:33:40 ERROR CreatePatientsCommand:34 - An error occured while creating patients for doctor
+java.lang.NumberFormatException: For input string: "null"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:658)
+	at java.base/java.lang.Integer.parseInt(Integer.java:776)
+	at hospital.utils.doctorcommands.CreatePatientsCommand.execute(CreatePatientsCommand.java:29)
+	at hospital.utils.doctorcommands.CreatePatientsCommandTest.exceptionExecute(CreatePatientsCommandTest.java:93)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 22:33:40 INFO  CreatePatientsCommand:28 - Creating patients for doctor
+2020-07-08 22:33:40 DEBUG RandomPatient:49 - amount of active patients without doctor:1
+2020-07-08 22:33:40 DEBUG RandomPatient:50 - amount of existing patients: 0
+2020-07-08 22:33:40 INFO  CreatePatientsCommand:31 - Patients have been created.
+2020-07-08 22:34:17 INFO  CreatePatientsCommand:28 - Creating patients for doctor
+2020-07-08 22:34:17 ERROR CreatePatientsCommand:34 - An error occured while creating patients for doctor
+java.lang.NumberFormatException: For input string: "null"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:658)
+	at java.base/java.lang.Integer.parseInt(Integer.java:776)
+	at hospital.utils.doctorcommands.CreatePatientsCommand.execute(CreatePatientsCommand.java:29)
+	at hospital.utils.doctorcommands.CreatePatientsCommandTest.exceptionExecute(CreatePatientsCommandTest.java:93)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 22:34:32 INFO  CreatePatientsCommand:28 - Creating patients for doctor
+2020-07-08 22:34:32 ERROR CreatePatientsCommand:34 - An error occured while creating patients for doctor
+java.lang.NumberFormatException: For input string: "null"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:68)
+	at java.base/java.lang.Integer.parseInt(Integer.java:658)
+	at java.base/java.lang.Integer.parseInt(Integer.java:776)
+	at hospital.utils.doctorcommands.CreatePatientsCommand.execute(CreatePatientsCommand.java:29)
+	at hospital.utils.doctorcommands.CreatePatientsCommandTest.exceptionExecute(CreatePatientsCommandTest.java:93)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 22:34:32 INFO  CreatePatientsCommand:28 - Creating patients for doctor
+2020-07-08 22:34:32 DEBUG RandomPatient:49 - amount of active patients without doctor:1
+2020-07-08 22:34:32 DEBUG RandomPatient:50 - amount of existing patients: 0
+2020-07-08 22:34:32 INFO  CreatePatientsCommand:31 - Patients have been created.
+2020-07-08 22:48:12 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:48:12 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 22:48:12 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-08 22:48:42 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:48:42 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 22:48:42 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-08 22:48:42 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:48:42 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 22:48:42 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-08 22:50:32 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:50:32 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 22:50:32 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-08 22:50:32 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:50:32 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 22:50:32 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-08 22:50:49 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:50:49 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 22:50:49 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-08 22:50:57 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:50:57 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 22:50:57 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-08 22:53:06 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:53:06 ERROR ReleasePatientCommand:48 - An error occured while patient's release procedure:
+java.lang.NullPointerException
+	at hospital.utils.doctorcommands.ReleasePatientCommand.execute(ReleasePatientCommand.java:34)
+	at hospital.utils.doctorcommands.ReleasePatientCommandTest.cannotReleasePatientTest(ReleasePatientCommandTest.java:121)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 22:54:22 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:54:22 ERROR ReleasePatientCommand:48 - An error occured while patient's release procedure:
+java.lang.NullPointerException
+	at hospital.utils.doctorcommands.ReleasePatientCommand.execute(ReleasePatientCommand.java:34)
+	at hospital.utils.doctorcommands.ReleasePatientCommandTest.cannotReleasePatientTest(ReleasePatientCommandTest.java:121)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 22:54:32 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:55:13 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:55:14 ERROR ReleasePatientCommand:48 - An error occured while patient's release procedure:
+java.lang.NullPointerException
+	at hospital.utils.doctorcommands.ReleasePatientCommand.execute(ReleasePatientCommand.java:34)
+	at hospital.utils.doctorcommands.ReleasePatientCommandTest.cannotReleasePatientTest(ReleasePatientCommandTest.java:121)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 22:55:28 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:57:11 ERROR ReleasePatientCommand:48 - An error occured while patient's release procedure:
+java.lang.NullPointerException
+	at hospital.utils.doctorcommands.ReleasePatientCommand.execute(ReleasePatientCommand.java:34)
+	at hospital.utils.doctorcommands.ReleasePatientCommandTest.cannotReleasePatientTest(ReleasePatientCommandTest.java:121)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 22:57:19 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:57:27 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 22:57:48 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-08 22:58:10 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:58:10 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 22:58:10 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-08 22:59:01 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 22:59:01 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 22:59:01 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-08 23:00:17 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 23:00:17 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 23:00:17 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-08 23:01:47 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 23:01:47 ERROR ReleasePatientCommand:48 - An error occured while patient's release procedure:
+java.lang.NullPointerException
+	at hospital.utils.doctorcommands.ReleasePatientCommand.execute(ReleasePatientCommand.java:34)
+	at hospital.utils.doctorcommands.ReleasePatientCommandTest.cannotReleasePatientTest(ReleasePatientCommandTest.java:123)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 23:02:43 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 23:02:43 ERROR ReleasePatientCommand:48 - An error occured while patient's release procedure:
+java.lang.NullPointerException
+	at hospital.utils.doctorcommands.ReleasePatientCommand.execute(ReleasePatientCommand.java:34)
+	at hospital.utils.doctorcommands.ReleasePatientCommandTest.cannotReleasePatientTest(ReleasePatientCommandTest.java:123)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 23:03:59 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 23:03:59 ERROR ReleasePatientCommand:48 - An error occured while patient's release procedure:
+java.lang.NullPointerException
+	at hospital.utils.doctorcommands.ReleasePatientCommand.execute(ReleasePatientCommand.java:34)
+	at hospital.utils.doctorcommands.ReleasePatientCommandTest.cannotReleasePatientTest(ReleasePatientCommandTest.java:124)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 23:05:44 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 23:05:44 ERROR ReleasePatientCommand:48 - An error occured while patient's release procedure:
+java.lang.NullPointerException
+	at hospital.utils.doctorcommands.ReleasePatientCommand.execute(ReleasePatientCommand.java:34)
+	at hospital.utils.doctorcommands.ReleasePatientCommandTest.cannotReleasePatientTest(ReleasePatientCommandTest.java:125)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 23:08:42 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 23:08:42 ERROR ReleasePatientCommand:48 - An error occured while patient's release procedure:
+java.lang.NullPointerException
+	at hospital.utils.doctorcommands.ReleasePatientCommand.execute(ReleasePatientCommand.java:34)
+	at hospital.utils.doctorcommands.ReleasePatientCommandTest.cannotReleasePatientTest(ReleasePatientCommandTest.java:125)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 23:09:06 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 23:09:06 ERROR ReleasePatientCommand:48 - An error occured while patient's release procedure:
+java.lang.NullPointerException
+	at hospital.utils.doctorcommands.ReleasePatientCommand.execute(ReleasePatientCommand.java:34)
+	at hospital.utils.doctorcommands.ReleasePatientCommandTest.cannotReleasePatientTest(ReleasePatientCommandTest.java:125)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 23:10:29 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 23:10:29 ERROR ReleasePatientCommand:48 - An error occured while patient's release procedure:
+java.lang.NullPointerException
+	at hospital.utils.doctorcommands.ReleasePatientCommand.execute(ReleasePatientCommand.java:34)
+	at hospital.utils.doctorcommands.ReleasePatientCommandTest.cannotReleasePatientTest(ReleasePatientCommandTest.java:129)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 23:11:01 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 23:11:01 ERROR ReleasePatientCommand:48 - An error occured while patient's release procedure:
+java.lang.NullPointerException
+	at hospital.utils.doctorcommands.ReleasePatientCommand.execute(ReleasePatientCommand.java:34)
+	at hospital.utils.doctorcommands.ReleasePatientCommandTest.cannotReleasePatientTest(ReleasePatientCommandTest.java:129)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 23:11:06 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 23:11:06 ERROR ReleasePatientCommand:48 - An error occured while patient's release procedure:
+java.lang.NullPointerException
+	at hospital.utils.doctorcommands.ReleasePatientCommand.execute(ReleasePatientCommand.java:34)
+	at hospital.utils.doctorcommands.ReleasePatientCommandTest.cannotReleasePatientTest(ReleasePatientCommandTest.java:129)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 23:11:27 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 23:12:53 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 23:14:03 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 23:14:09 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 23:14:24 INFO  ReleasePatientCommand:39 - Patient can't be released
+2020-07-08 23:14:38 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 23:14:38 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 23:14:38 INFO  ReleasePatientCommand:39 - Patient can't be released
+2020-07-08 23:15:03 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 23:15:03 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 23:15:03 INFO  ReleasePatientCommand:39 - Patient can't be released
+2020-07-08 23:15:20 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 23:15:20 ERROR ReleasePatientCommand:48 - An error occured while patient's release procedure:
+java.lang.NullPointerException
+	at hospital.utils.doctorcommands.ReleasePatientCommand.execute(ReleasePatientCommand.java:34)
+	at hospital.utils.doctorcommands.ReleasePatientCommandTest.executeReleasePatient(ReleasePatientCommandTest.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-08 23:15:21 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 23:15:21 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 23:15:21 INFO  ReleasePatientCommand:39 - Patient can't be released
+2020-07-08 23:16:29 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 23:16:29 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 23:16:29 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-08 23:16:29 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 23:16:29 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 23:16:29 INFO  ReleasePatientCommand:39 - Patient can't be released
+2020-07-08 23:20:45 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 23:20:45 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 23:20:45 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-08 23:20:45 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-08 23:20:45 DEBUG ReleasePatientCommand:34 - Patient isBenSmith
+2020-07-08 23:20:45 INFO  ReleasePatientCommand:39 - Patient can't be released
+2020-07-08 23:23:22 DEBUG AuthFilter:55 - Active user is Maria Klein
+2020-07-08 23:23:22 INFO  AuthFilter:85 - User successfully loged in as a nurse
+2020-07-08 23:23:22 INFO  NursePageCommand:40 - Active nurse:MariaKlein
+2020-07-08 23:23:22 INFO  NursePageCommand:44 - Redicrecting to nurse page
+2020-07-08 23:24:31 INFO  NurseFindPatientsCommand:27 - creating patients for nurse
+2020-07-08 23:24:32 INFO  NurseFindPatientsCommand:30 - patients have been successfully created
+2020-07-08 23:24:32 INFO  NursePageCommand:40 - Active nurse:MariaKlein
+2020-07-08 23:24:32 INFO  NursePageCommand:44 - Redicrecting to nurse page
+2020-07-08 23:24:45 INFO  NurseDoPrescrCommand:29 - Prescription performing
+2020-07-08 23:24:46 DEBUG NurseDoPrescrCommand:33 - Prescription classmedicine
+2020-07-08 23:24:47 INFO  NurseDoPrescrCommand:41 - Prescription successfully performed
+2020-07-08 23:24:47 INFO  NursePageCommand:40 - Active nurse:MariaKlein
+2020-07-08 23:24:47 INFO  NursePageCommand:44 - Redicrecting to nurse page
+2020-07-09 00:03:24 DEBUG AuthFilter:55 - Active user is Steve Madden
+2020-07-09 00:03:24 INFO  AuthFilter:81 - User successfully loged in as a doctor
+2020-07-09 00:04:28 DEBUG AuthFilter:55 - Active user is Steve Madden
+2020-07-09 00:04:28 INFO  AuthFilter:81 - User successfully loged in as a doctor
+2020-07-09 00:10:34 DEBUG AuthFilter:55 - Active user is Steve Madden
+2020-07-09 00:10:34 INFO  AuthFilter:81 - User successfully loged in as a doctor
+2020-07-09 00:12:15 DEBUG AuthFilter:55 - Active user is Yelyzaveta Onyshchenko
+2020-07-09 00:12:15 INFO  AuthFilter:81 - User successfully loged in as a doctor
+2020-07-09 00:15:56 DEBUG AuthFilter:55 - Active user is Steve Madden
+2020-07-09 00:15:56 INFO  AuthFilter:81 - User successfully loged in as a doctor
+2020-07-09 00:35:55 DEBUG AuthFilter:55 - Active user is Steve Madden
+2020-07-09 00:35:55 INFO  AuthFilter:81 - User successfully loged in as a doctor
+2020-07-09 00:35:55 DEBUG DoctorPageCommand:41 - Active doctor is: Steve Madden
+2020-07-09 00:35:56 INFO  DoctorPageCommand:45 - redirecting to doctor page
+2020-07-09 00:37:24 DEBUG AuthFilter:55 - Active user is Maria Klein
+2020-07-09 00:37:24 INFO  AuthFilter:85 - User successfully loged in as a nurse
+2020-07-09 00:37:24 INFO  NursePageCommand:40 - Active nurse:MariaKlein
+2020-07-09 00:37:24 INFO  NursePageCommand:44 - Redicrecting to nurse page
+2020-07-09 00:37:32 INFO  NurseFindPatientsCommand:27 - creating patients for nurse
+2020-07-09 00:37:32 INFO  NurseFindPatientsCommand:30 - patients have been successfully created
+2020-07-09 00:37:32 INFO  NursePageCommand:40 - Active nurse:MariaKlein
+2020-07-09 00:37:32 INFO  NursePageCommand:44 - Redicrecting to nurse page
+2020-07-09 00:37:34 INFO  NurseFindPatientsCommand:27 - creating patients for nurse
+2020-07-09 00:37:34 INFO  NurseFindPatientsCommand:30 - patients have been successfully created
+2020-07-09 00:37:34 INFO  NursePageCommand:40 - Active nurse:MariaKlein
+2020-07-09 00:37:34 INFO  NursePageCommand:44 - Redicrecting to nurse page
+2020-07-09 00:37:47 INFO  NurseFindPatientsCommand:27 - creating patients for nurse
+2020-07-09 00:37:47 INFO  NurseFindPatientsCommand:30 - patients have been successfully created
+2020-07-09 00:37:47 INFO  NursePageCommand:40 - Active nurse:MariaKlein
+2020-07-09 00:37:48 INFO  NursePageCommand:44 - Redicrecting to nurse page
+2020-07-09 00:37:50 INFO  NurseFindPatientsCommand:27 - creating patients for nurse
+2020-07-09 00:37:50 INFO  NurseFindPatientsCommand:30 - patients have been successfully created
+2020-07-09 00:37:50 INFO  NursePageCommand:40 - Active nurse:MariaKlein
+2020-07-09 00:37:50 INFO  NursePageCommand:44 - Redicrecting to nurse page
+2020-07-09 00:49:03 DEBUG AuthFilter:55 - Active user is Steve Madden
+2020-07-09 00:49:03 INFO  AuthFilter:81 - User successfully loged in as a doctor
+2020-07-09 00:49:03 DEBUG DoctorPageCommand:41 - Active doctor is: Steve Madden
+2020-07-09 00:49:03 INFO  DoctorPageCommand:45 - redirecting to doctor page
+2020-07-09 00:49:13 INFO  CreatePrescriptionsCommand:34 - Prescriptions establishment
+2020-07-09 00:49:13 DEBUG CreatePrescriptionsCommand:37 - Patient isAnnaVal
+2020-07-09 00:49:14 INFO  CreatePrescriptionsCommand:39 - Prescriptions established successfully
+2020-07-09 00:49:14 DEBUG DoctorPageCommand:41 - Active doctor is: Steve Madden
+2020-07-09 00:49:14 INFO  DoctorPageCommand:45 - redirecting to doctor page
+2020-07-09 00:49:21 INFO  DoPrescriptionCommand:29 - Prescriptions performing
+2020-07-09 00:49:21 DEBUG DoPrescriptionCommand:33 - Prescription class isprocedures
+2020-07-09 00:49:22 INFO  DoPrescriptionCommand:40 - Prescriptions performed successfully
+2020-07-09 00:49:22 DEBUG DoctorPageCommand:41 - Active doctor is: Steve Madden
+2020-07-09 00:49:22 INFO  DoctorPageCommand:45 - redirecting to doctor page
+2020-07-09 00:49:28 INFO  CreatePrescriptionsCommand:34 - Prescriptions establishment
+2020-07-09 00:49:28 DEBUG CreatePrescriptionsCommand:37 - Patient isUser1User
+2020-07-09 00:49:28 INFO  CreatePrescriptionsCommand:39 - Prescriptions established successfully
+2020-07-09 00:49:28 DEBUG DoctorPageCommand:41 - Active doctor is: Steve Madden
+2020-07-09 00:49:28 INFO  DoctorPageCommand:45 - redirecting to doctor page
+2020-07-09 00:49:33 INFO  DoPrescriptionCommand:29 - Prescriptions performing
+2020-07-09 00:49:33 DEBUG DoPrescriptionCommand:33 - Prescription class ismedicine
+2020-07-09 00:49:33 INFO  DoPrescriptionCommand:40 - Prescriptions performed successfully
+2020-07-09 00:49:34 DEBUG DoctorPageCommand:41 - Active doctor is: Steve Madden
+2020-07-09 00:49:34 INFO  DoctorPageCommand:45 - redirecting to doctor page
+2020-07-09 00:49:38 INFO  ReleasePatientCommand:30 - Patient's release
+2020-07-09 00:49:38 DEBUG ReleasePatientCommand:34 - Patient isUser1User
+2020-07-09 00:49:38 INFO  ReleasePatientCommand:44 - Patient have been released
+2020-07-09 00:49:38 DEBUG DoctorPageCommand:41 - Active doctor is: Steve Madden
+2020-07-09 00:49:38 INFO  DoctorPageCommand:45 - redirecting to doctor page
+2020-07-09 01:07:13 DEBUG AuthFilter:55 - Active user is Steve Madden
+2020-07-09 01:07:13 INFO  AuthFilter:81 - User successfully loged in as a doctor
+2020-07-09 01:07:13 DEBUG DoctorPageCommand:41 - Active doctor is: Steve Madden
+2020-07-09 01:07:13 INFO  DoctorPageCommand:45 - redirecting to doctor page
+2020-07-09 01:09:45 DEBUG AuthFilter:55 - Active user is Steve Madden
+2020-07-09 01:09:45 INFO  AuthFilter:81 - User successfully loged in as a doctor
+2020-07-09 01:09:45 INFO  DoctorPageCommand:45 - redirecting to doctor page
+2020-07-09 01:10:02 INFO  AuthFilter:45 - User already logged in
+2020-07-09 01:11:08 DEBUG AuthFilter:55 - Active user is Steve Madden
+2020-07-09 01:11:08 INFO  AuthFilter:81 - User successfully loged in as a doctor
+2020-07-09 01:11:08 INFO  DoctorPageCommand:45 - redirecting to doctor page
+2020-07-09 01:11:28 INFO  AuthFilter:45 - User already logged in
+2020-07-09 01:12:51 DEBUG AuthFilter:55 - Active user is Steve Madden
+2020-07-09 01:12:51 INFO  AuthFilter:81 - User successfully loged in as a doctor
+2020-07-09 01:12:51 DEBUG DoctorPageCommand:42 - Active doctor is: Steve Madden
+2020-07-09 01:12:51 INFO  DoctorPageCommand:46 - redirecting to doctor page
+2020-07-09 01:13:00 INFO  AuthFilter:45 - User already logged in
+2020-07-09 01:16:56 DEBUG AuthFilter:57 - Active user is Steve Madden
+2020-07-09 01:16:56 INFO  AuthFilter:83 - User successfully loged in as a doctor
+2020-07-09 01:16:56 DEBUG DoctorPageCommand:42 - Active doctor is: Steve Madden
+2020-07-09 01:16:56 INFO  DoctorPageCommand:46 - redirecting to doctor page
+2020-07-09 01:17:05 INFO  AuthFilter:45 - User already logged in
+2020-07-09 01:17:05 INFO  AuthFilter:83 - User successfully loged in as a doctor
+2020-07-09 01:22:52 DEBUG AuthFilter:57 - Active user is Steve Madden
+2020-07-09 01:22:52 INFO  AuthFilter:83 - User successfully loged in as a doctor
+2020-07-09 01:22:52 DEBUG DoctorPageCommand:42 - Active doctor is: Steve Madden
+2020-07-09 01:22:52 INFO  DoctorPageCommand:46 - redirecting to doctor page
+2020-07-09 01:23:15 INFO  AuthFilter:45 - User already logged in
+2020-07-09 01:23:15 INFO  AuthFilter:83 - User successfully loged in as a doctor
+2020-07-09 01:24:54 DEBUG AuthFilter:57 - Active user is Steve Madden
+2020-07-09 01:24:54 INFO  AuthFilter:83 - User successfully loged in as a doctor
+2020-07-09 01:24:54 DEBUG DoctorPageCommand:42 - Active doctor is: Steve Madden
+2020-07-09 01:24:54 INFO  DoctorPageCommand:46 - redirecting to doctor page
+2020-07-09 01:25:06 INFO  AuthFilter:45 - User already logged in
+2020-07-09 01:25:06 INFO  AuthFilter:83 - User successfully loged in as a doctor
+2020-07-09 01:25:06 DEBUG DoctorPageCommand:42 - Active doctor is: Steve Madden
+2020-07-09 01:25:06 INFO  DoctorPageCommand:46 - redirecting to doctor page
+2020-07-09 01:25:20 DEBUG AuthFilter:57 - Active user is Maria Klein
+2020-07-09 01:25:20 INFO  AuthFilter:87 - User successfully loged in as a nurse
+2020-07-09 01:25:20 INFO  NursePageCommand:44 - Redicrecting to nurse page
+2020-07-09 01:25:30 INFO  AuthFilter:45 - User already logged in
+2020-07-09 01:25:30 INFO  AuthFilter:87 - User successfully loged in as a nurse
+2020-07-09 01:25:30 INFO  NursePageCommand:44 - Redicrecting to nurse page

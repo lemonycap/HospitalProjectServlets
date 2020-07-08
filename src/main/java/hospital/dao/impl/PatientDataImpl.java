@@ -88,7 +88,7 @@ public class PatientDataImpl {
 
     }
 
-    public static List<PatientData> findAll() {
+    public  List<PatientData> findAll() {
         List<PatientData> result = new ArrayList<PatientData>();
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement preparedStatement = connection.prepareStatement(PatientDataQueries.FIND_ALL);

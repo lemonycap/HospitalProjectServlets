@@ -39,6 +39,17 @@ public class PatientData {
         this.currentPrescriptions = patientDataManipulations.findNewPrescriptions(patientId);
     }
 
+    public PatientData(int patientId,int doctorId, int nurseId, int diagnosisId, int patientStatus,PatientDataManipulations manipulations) {
+        this.patientDataManipulations = manipulations;
+        this.patient = patientDataManipulations.detectPerson(patientId);
+        this.doctor = patientDataManipulations.detectPerson(doctorId);
+        this.nurse = patientDataManipulations.detectPerson(nurseId);
+        this.diagnosis = patientDataManipulations.detectDiagnosis(diagnosisId);
+        this.patientStatus = patientStatus;
+        this.prescriptionHistory = patientDataManipulations.findPatientHistory(patientId);
+        this.currentPrescriptions = patientDataManipulations.findNewPrescriptions(patientId);
+    }
+
     public Set<Prescription> getPrescriptionHistory() {
         return prescriptionHistory;
     }

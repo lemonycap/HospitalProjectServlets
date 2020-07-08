@@ -40,7 +40,7 @@ public class CreateDiagnosisCommand implements ServletCommand {
             patientDataImpl.updateDiagnosis(diagnoses.get(number).getId(), patient.getPatient().getId());
             log.info("Diagnosis successfuly established");
             request.getServletContext().getRequestDispatcher("/doctorPage").forward(request, response);
-        } catch (ServletException | IOException e) {
+        } catch (IOException | ServletException e) {
             log.error("An error occured while diagnosis establishment:", e);
            request.getServletContext().getRequestDispatcher("/error.jsp").forward(request, response);
         }

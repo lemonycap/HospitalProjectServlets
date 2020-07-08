@@ -32,11 +32,11 @@ public class ReleasePatientCommand implements ServletCommand {
             int id = Integer.parseInt(request.getParameter("id"));
             PatientData patient = patientDataImpl.findByPatientId(id);
             log.debug("Patient is" + patient.getPatient().getName() + patient.getPatient().getSurname());
-            log.debug("Patient is" + patient.getPatient().getName() + patient.getPatient().getSurname());
             boolean abilityToRelease = true;
             for (Prescription prescription : patient.getCurrentPrescriptions()) {
                 if (prescription.getPrescriptionClass().equals("operations")) {
                     abilityToRelease = false;
+                    log.info("Patient can't be released");
                 }
             }
             if (abilityToRelease) {

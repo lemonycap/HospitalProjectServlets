@@ -19,10 +19,12 @@ public class CreatePrescriptionsCommand implements ServletCommand {
 
     public CreatePrescriptionsCommand() {
         this.factory = new DAOFactory();
+        this.patientDataManipulations = new PatientDataManipulations();
     }
 
-    public CreatePrescriptionsCommand(DAOFactory daoFactory) {
+    public CreatePrescriptionsCommand(DAOFactory daoFactory,PatientDataManipulations patientDataManipulations) {
         this.factory = daoFactory;
+        this.patientDataManipulations = patientDataManipulations;
     }
 
     @Override

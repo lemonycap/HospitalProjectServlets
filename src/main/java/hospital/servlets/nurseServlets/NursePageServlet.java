@@ -28,7 +28,7 @@ public class NursePageServlet extends HttpServlet {
             String email = String.valueOf(session.getAttribute("email"));
             String password = (String.valueOf(session.getAttribute("password")));
             String url = String.valueOf(request.getRequestURL());
-            ServletCommand command = CommandFactory.createCommand(url,request,response);
+            ServletCommand command = CommandFactory.createCommand(url);
             command.execute(request,response);
     }
 

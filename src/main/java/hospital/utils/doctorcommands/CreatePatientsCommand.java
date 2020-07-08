@@ -11,8 +11,17 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class CreatePatientsCommand implements ServletCommand {
-    RandomPatient randomPatient;
     private static final Logger log = Logger.getLogger(CreatePatientsCommand.class);
+    RandomPatient randomPatient;
+
+    public CreatePatientsCommand() {
+        this.randomPatient = new RandomPatient();
+    }
+
+    public CreatePatientsCommand(RandomPatient randomPatient) {
+        this.randomPatient = randomPatient;
+    }
+
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
