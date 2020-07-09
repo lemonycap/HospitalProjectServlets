@@ -11,9 +11,22 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+/**
+ * Class, which represents Diagnosis DAO
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 
 public class DiagnosisDAOImpl {
+    /**
+     * Instance of Logger
+     */
     private static final Logger log = Logger.getLogger(DiagnosisDAOImpl.class);
+
+    /**
+     * Find all diagnoses
+     * @return list of diagnoses
+     */
     public  List<Diagnosis> findAll() {
         List<Diagnosis> result = new ArrayList<Diagnosis>();
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -33,7 +46,10 @@ public class DiagnosisDAOImpl {
 
         return result;
     }
-
+    /**
+     * Find diagnosis by id
+     * @return corresponding diagnosis
+     */
     public  Diagnosis findById(int id) {
         Diagnosis diagnosis = null;
         try(Connection connection = ConnectionPool.getConnection()) {

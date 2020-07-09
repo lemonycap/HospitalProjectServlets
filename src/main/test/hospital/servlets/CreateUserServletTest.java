@@ -24,11 +24,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
-
+/**
+ * Class for testing of user registration.
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 @RunWith(MockitoJUnitRunner.class)
 public class CreateUserServletTest {
     @Mock
@@ -90,7 +95,11 @@ public class CreateUserServletTest {
         role = null;
         roleClass = null;
     }
-
+    /**
+     * Tests the HTTP GET request.
+     * @throws IOException
+     * @throws ServletException
+     */
     @Test
     public void doGet() throws ServletException, IOException {
         Mockito.when(request.getRequestDispatcher("registration.jsp")).thenReturn(dispatcher);
@@ -98,6 +107,11 @@ public class CreateUserServletTest {
         verify(dispatcher, times(1)).forward(request,response);
     }
 
+    /**
+     * Tests the HTTP POST request. User already exists in database
+     * @throws IOException
+     * @throws ServletException
+     */
     @Test
     public void doPostCorrectDataUserExists() throws ServletException, IOException {
 
@@ -113,7 +127,11 @@ public class CreateUserServletTest {
         createUserServlet.doPost(request,response);
         verify(dispatcher, times(1)).forward(request,response);
     }
-
+    /**
+     * Tests the HTTP POST request. User doesn't exist in database
+     * @throws IOException
+     * @throws ServletException
+     */
     @Test
     public void doPostCorrectDataUserDoesntExist() throws ServletException, IOException {
         roleClass = new Role(1,"PATIENT");
@@ -131,6 +149,11 @@ public class CreateUserServletTest {
         verify(response).sendRedirect(request.getContextPath() + "/");
     }
 
+    /**
+     * Tests the HTTP POST request. User enters non-valid credentials
+     * @throws IOException
+     * @throws ServletException
+     */
     @Test
     public void doPostIncorrectData() throws ServletException, IOException {
         email = "lemonycap@gil.c";

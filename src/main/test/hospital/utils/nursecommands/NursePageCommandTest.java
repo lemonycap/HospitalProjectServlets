@@ -23,7 +23,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import static org.mockito.Mockito.*;
-
+/**
+ * Class for testing of nurse page command
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 @RunWith(MockitoJUnitRunner.class)
 public class NursePageCommandTest {
     @Mock
@@ -69,7 +73,11 @@ public class NursePageCommandTest {
         password = null;
         command = null;
     }
-
+    /**
+     * Testing of correct command execution
+     * @throws ServletException
+     * @throws IOException
+     */
     @Test
     public void execute() throws ServletException, IOException {
         Mockito.when(request.getSession()).thenReturn(session);
@@ -87,7 +95,11 @@ public class NursePageCommandTest {
         verify(request,times(1)).setAttribute(eq("activePatients"),Mockito.any());
         verify(context, times(1)).getRequestDispatcher("/nursesPage.jsp");
     }
-
+    /**
+     * Testing of method work when user is null
+     * @throws ServletException
+     * @throws IOException
+     */
     @Test (expected = Exception.class)
     public void executeIfUserIsNull() throws ServletException,IOException {
         Mockito.when(request.getSession()).thenReturn(session);

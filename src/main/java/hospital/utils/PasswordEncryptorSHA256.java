@@ -3,8 +3,18 @@ package hospital.utils;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+/**
+ * Class, which represents password encryptor using algorithm SHA-256
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 public class PasswordEncryptorSHA256 {
-
+    /**
+     * Method that encrypts string using SHA-256
+     * @param input input string
+     * @return encrypted string
+     * @throws NoSuchAlgorithmException no such algorithm exception
+     */
     public static String encryptPasswordWithSHA256(String input) throws NoSuchAlgorithmException {
         MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
         byte[] result = messageDigest.digest(input.getBytes());

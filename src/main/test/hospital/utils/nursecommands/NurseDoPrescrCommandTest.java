@@ -25,7 +25,11 @@ import java.sql.SQLException;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 import static org.mockito.Mockito.when;
-
+/**
+ * Class for testing of performing prescription for patient
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 @RunWith(MockitoJUnitRunner.class)
 public class NurseDoPrescrCommandTest {
     @Mock
@@ -72,8 +76,11 @@ public class NurseDoPrescrCommandTest {
         medicinePrecr = null;
     }
 
-
-
+    /**
+     * Testing of correct command execution when prescription is medical
+     * @throws ServletException
+     * @throws IOException
+     */
     @Test
     public void executeMedicinePrescription() throws ServletException, IOException, SQLException {
         Mockito.when(factory.createPrescriptionDao()).thenReturn(prescriptionDAO);
@@ -89,6 +96,11 @@ public class NurseDoPrescrCommandTest {
         verify(context, times(1)).getRequestDispatcher("/nursePage");
     }
 
+    /**
+     * Testing of correct command execution when prescription is procedure or operations
+     * @throws ServletException
+     * @throws IOException
+     */
     @Test
     public void executeOtherPrescription() throws ServletException, IOException {
         Mockito.when(factory.createPrescriptionDao()).thenReturn(prescriptionDAO);

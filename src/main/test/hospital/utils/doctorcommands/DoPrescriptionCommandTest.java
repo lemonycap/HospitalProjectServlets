@@ -24,7 +24,11 @@ import java.sql.SQLException;
 
 import static org.mockito.Mockito.*;
 import static org.mockito.Mockito.times;
-
+/**
+ * Class for testing of performing prescription for patient
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 @RunWith(MockitoJUnitRunner.class)
 public class DoPrescriptionCommandTest {
     @Mock
@@ -72,7 +76,11 @@ public class DoPrescriptionCommandTest {
         medicinePrecr = null;
     }
 
-
+    /**
+     * Testing of correct command execution when prescription is medical
+     * @throws ServletException
+     * @throws IOException
+     */
     @Test
     public void executeMedicinePrescription() throws ServletException, IOException, SQLException {
         Mockito.when(factory.createPrescriptionDao()).thenReturn(prescriptionDAO);
@@ -87,7 +95,11 @@ public class DoPrescriptionCommandTest {
         verify(singleTransaction, times(1)).transfer(id,patientId);
         verify(context, times(1)).getRequestDispatcher("/doctorPage");
     }
-
+    /**
+     * Testing of correct command execution when prescription is procedure or operations
+     * @throws ServletException
+     * @throws IOException
+     */
     @Test
     public void executeOtherPrescription() throws ServletException, IOException {
         Mockito.when(factory.createPrescriptionDao()).thenReturn(prescriptionDAO);

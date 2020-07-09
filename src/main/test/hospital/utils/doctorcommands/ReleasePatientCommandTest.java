@@ -34,7 +34,11 @@ import java.util.Set;
 import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
-
+/**
+ * Class for testing of performing release of patient from hospital
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 @RunWith(MockitoJUnitRunner.class)
 public class ReleasePatientCommandTest {
     @Mock
@@ -97,7 +101,11 @@ public class ReleasePatientCommandTest {
         context = null;
         dispatcher = null;
     }
-
+    /**
+     * Testing of correct command execution when patient can be released from hospital
+     * @throws ServletException
+     * @throws IOException
+     */
     @Test
     public void executeReleasePatient() throws ServletException, IOException {
         patient1 = new PatientData(id,2,2,3,1,patientDataManipulations);
@@ -111,7 +119,11 @@ public class ReleasePatientCommandTest {
         releasePatientCommand.execute(request,response);
         verify(patientDataImpl,times(1)).updatePatientStatus(id);
     }
-
+    /**
+     * Testing of correct command execution when patient can't be released from hospital,because of operation prescriptions
+     * @throws ServletException
+     * @throws IOException
+     */
     @Test
     public void cannotReleasePatientTest() throws ServletException, IOException {
         patient2 = new PatientData(id,2,3,1,1,patientDataManipulations);

@@ -24,6 +24,11 @@ import java.security.NoSuchAlgorithmException;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
+/**
+ * Class for testing AuthFilter class.
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 @RunWith(MockitoJUnitRunner.class)
 public class AuthFilterTest {
     @Mock
@@ -40,11 +45,13 @@ public class AuthFilterTest {
     HttpSession session;
     @InjectMocks
     AuthFilter authFilter;
+
     User activeUser;
     User unactiveUser;
     FilterChain filterChain;
     String email;
     String password;
+
     @Before
     public void setUp() throws Exception {
         Mockito.when(factory.createUserDao()).thenReturn(userDAO);
@@ -65,6 +72,12 @@ public class AuthFilterTest {
         password = null;
     }
 
+    /**
+     * Tests the authentication of user with role DOCTOR.
+     * @throws IOException
+     * @throws ServletException
+     * @throws NoSuchAlgorithmException
+     */
     @Test
     public void doctorAuth() throws IOException, ServletException, NoSuchAlgorithmException {
         Mockito.when(request.getSession()).thenReturn(session);
@@ -76,6 +89,13 @@ public class AuthFilterTest {
         authFilter.doFilter((ServletRequest)request,(ServletResponse)response, filterChain);
         verify(request, times(1)).getRequestDispatcher("/doctorPage");
     }
+
+    /**
+     * Tests the authentication of user with role NURSE.
+     * @throws IOException
+     * @throws ServletException
+     * @throws NoSuchAlgorithmException
+     */
     @Test
     public void nurseAuth() throws IOException, ServletException, NoSuchAlgorithmException {
         Mockito.when(request.getSession()).thenReturn(session);
@@ -87,6 +107,13 @@ public class AuthFilterTest {
         authFilter.doFilter((ServletRequest)request,(ServletResponse)response, filterChain);
         verify(request, times(1)).getRequestDispatcher("/nursePage");
     }
+
+    /**
+     * Tests the authentication of user with role PATIENT.
+     * @throws IOException
+     * @throws ServletException
+     * @throws NoSuchAlgorithmException
+     */
     @Test
     public void patientAuth() throws IOException, ServletException, NoSuchAlgorithmException {
         Mockito.when(request.getSession()).thenReturn(session);
@@ -98,7 +125,12 @@ public class AuthFilterTest {
         authFilter.doFilter((ServletRequest)request,(ServletResponse)response, filterChain);
         verify(request, times(1)).getRequestDispatcher("/patientPage");
     }
-
+    /**
+     * Tests the authentication of user with non-valid credentials
+     * @throws IOException
+     * @throws ServletException
+     * @throws NoSuchAlgorithmException
+     */
     @Test (expected = NullPointerException.class)
     public void noUserWithSuchCredentialsExists() throws NoSuchAlgorithmException, IOException, ServletException {
         Mockito.when(request.getSession()).thenReturn(session);

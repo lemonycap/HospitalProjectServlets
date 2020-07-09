@@ -3,6 +3,7 @@ package hospital.servlets;
 import hospital.dao.impl.*;
 import hospital.entity.Role;
 import hospital.entity.User;
+import hospital.servlets.patientServlets.PatientPageServlet;
 import hospital.utils.InputDataCheck;
 import hospital.utils.PasswordEncryptorSHA256;
 import hospital.utils.RegexContainer;
@@ -20,33 +21,69 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Class, which represents servlet for creating new user.
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
+
 @WebServlet("/registration")
 
 public class CreateUserServlet extends HttpServlet {
-
+    /**
+     * Instance of Logger
+     */
     private static final Logger log = Logger.getLogger(CreateUserServlet.class);
-
+    /**
+     * Instance of User
+     */
    User user = null;
+    /**
+     * Instance of PatientDataManipulations
+     */
    PatientDataManipulations patientDataManipulations;
+    /**
+     * Instance of DAO factory
+     */
    DAOFactory factory;
 
+    /**
+     * Constructor for creating new object
+     * @see CreateUserServlet(DAOFactory,PatientDataManipulations)
+     */
    public CreateUserServlet() {
        this.factory = new DAOFactory();
        patientDataManipulations = new PatientDataManipulations();
    }
-
+    /**
+     * Constructor for creating new object
+     * @see CreateUserServlet()
+     */
    public CreateUserServlet(DAOFactory daoFactory,PatientDataManipulations patientDataManipulations2) {
        this.factory = daoFactory;
        patientDataManipulations = patientDataManipulations2;
    }
 
+    /**
+     * Method performing HHTP GET request
+     * @param req HttpRequest
+     * @param resp HttpResponse
+     * @throws ServletException On servlet error
+     * @throws IOException On error fulfilling the request
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         log.info("Entering a registration page");
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("registration.jsp");
         requestDispatcher.forward(req, resp);
     }
-
+    /**
+     * Method performing HHTP POST request
+     * @param req HttpRequest
+     * @param resp HttpResponse
+     * @throws ServletException On servlet error
+     * @throws IOException On error fulfilling the request
+     */
         protected void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
       try {
@@ -88,6 +125,14 @@ public class CreateUserServlet extends HttpServlet {
             }
     }
 
+    /**
+     * Method for validating input values using regular expressions
+     * @param name name of the user to check
+     * @param surname surname of the user to check
+     * @param email email of the user to check
+     * @param password password of the user to check
+     * @return true if data is valid,else - false
+     */
     public static boolean inputValidator(String name, String surname, String email, String password ) {
         boolean isValid;
         isValid = InputDataCheck.inputCheck(name, RegexContainer.REGEX_NAME_ENG);

@@ -12,18 +12,43 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Class, which represents release of the patient command.
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 public class ReleasePatientCommand implements ServletCommand {
+    /**
+     * Instance of Logger
+     */
     private static final Logger log = Logger.getLogger(ReleasePatientCommand.class);
+    /**
+     * Instance of DAO factory
+     */
     DAOFactory factory;
 
+    /**
+     * Constructor for creating new object
+     * @see ReleasePatientCommand(DAOFactory)
+     */
     public ReleasePatientCommand() {
         this.factory = new DAOFactory();
     }
-
+    /**
+     * Constructor for creating new object
+     * @see ReleasePatientCommand()
+     */
     public ReleasePatientCommand(DAOFactory factory) {
         this.factory = factory;
     }
 
+    /**
+     * Execute command method
+     * @param request HttpRequest
+     * @param response HttpResponse
+     * @throws ServletException on servlet exception
+     * @throws IOException on error occured while processing the request
+     */
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {

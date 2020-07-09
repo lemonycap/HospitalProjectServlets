@@ -25,7 +25,11 @@ import java.util.ArrayList;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 import static org.mockito.Mockito.times;
-
+/**
+ * Class for testing of creating patients for doctor
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 @RunWith(MockitoJUnitRunner.class)
 public class CreatePatientsCommandTest {
     @Mock
@@ -71,7 +75,11 @@ public class CreatePatientsCommandTest {
         dispatcher = null;
         user = null;
     }
-
+    /**
+     * Testing of correct command execution
+     * @throws ServletException
+     * @throws IOException
+     */
     @Test
     public void execute() throws ServletException, IOException {
         Mockito.when(request.getParameter("id")).thenReturn(String.valueOf(id));
@@ -83,7 +91,11 @@ public class CreatePatientsCommandTest {
         createPatientsCommand.execute(request,response);
         verify(context, times(1)).getRequestDispatcher("/doctorPage");
     }
-
+    /**
+     * Testing of method work with passing to it null value of id parameter
+     * @throws ServletException
+     * @throws IOException
+     */
     @Test (expected =NullPointerException.class)
     public void exceptionExecute() throws  ServletException,IOException {
         Integer integer = null;

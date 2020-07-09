@@ -26,7 +26,11 @@ import java.util.List;
 
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.*;
-
+/**
+ * Class for testing of doctor page command
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 @RunWith(MockitoJUnitRunner.class)
 public class DoctorPageCommandTest {
     @Mock
@@ -72,7 +76,11 @@ public class DoctorPageCommandTest {
         password = null;
         command = null;
     }
-
+    /**
+     * Testing of correct command execution
+     * @throws ServletException
+     * @throws IOException
+     */
     @Test
     public void execute() throws ServletException, IOException {
         Mockito.when(request.getSession()).thenReturn(session);
@@ -90,7 +98,11 @@ public class DoctorPageCommandTest {
         verify(request,times(1)).setAttribute(eq("activePatients"),Mockito.any());
         verify(context, times(1)).getRequestDispatcher("/doctorsPage.jsp");
     }
-
+    /**
+     * Testing of method work when user is null
+     * @throws ServletException
+     * @throws IOException
+     */
     @Test (expected = Exception.class)
     public void executeIfUserIsNull() throws ServletException,IOException {
         Mockito.when(request.getSession()).thenReturn(session);

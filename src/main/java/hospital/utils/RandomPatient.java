@@ -3,22 +3,45 @@ package hospital.utils;
 import hospital.dao.impl.PatientDataImpl;
 import hospital.entity.PatientData;
 import hospital.utils.factories.DAOFactory;
+import hospital.utils.utilsForDBData.PatientDataManipulations;
 import org.apache.log4j.Logger;
 
 import java.util.List;
 
+/**
+ * Class, which used to random patient for doctor or nurse
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 public class RandomPatient {
+    /**
+     * Instance of Logger
+     */
     private static final Logger log = Logger.getLogger(RandomPatient.class);
+    /**
+     * Instance of DAO factory
+     */
     DAOFactory factory;
 
+    /**
+     * Constructor for creating new object.
+     * @see RandomPatient(DAOFactory)
+     */
     public RandomPatient() {
         this.factory = new DAOFactory();
     }
-
+    /**
+     * Constructor for creating new object.
+     * @see RandomPatient()
+     */
     public RandomPatient(DAOFactory factory) {
         this.factory = factory;
     }
 
+    /**
+     * Create patient for nurse
+     * @param id id of nurse
+     */
     public void randomPatientNurse(int id) {
         PatientDataImpl patientDataImpl = factory.createPatientDataDao();
         List<PatientData> patientData = patientDataImpl.findAllWhereNoNurse();
@@ -36,7 +59,10 @@ public class RandomPatient {
             }
         }
     }
-
+    /**
+     * Create patient for doctor
+     * @param id id of doctor
+     */
     public  void randomPatientDoc(int id) {
         PatientDataImpl patientDataImpl = factory.createPatientDataDao();
         List<PatientData> patientData = patientDataImpl.findAllWhereNoDoc();

@@ -22,10 +22,16 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
+/**
+ * Class for testing PatientPageServlet class.
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 @RunWith(MockitoJUnitRunner.class)
 public class PatientPageServletTest {
     @Mock
@@ -74,6 +80,12 @@ public class PatientPageServletTest {
 
     }
 
+    /**
+     * Tests the HTTP POST request of PatientPageServlet class. User is successfully redirected to PatientPage.
+     * @throws IOException
+     * @throws ServletException
+     * @throws NoSuchAlgorithmException
+     */
     @Test
     public void doPost() throws ServletException, IOException {
         Mockito.when(factory.createUserDao()).thenReturn(userDAO);

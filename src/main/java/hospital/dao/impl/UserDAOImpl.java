@@ -8,10 +8,20 @@ import org.apache.log4j.Logger;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Class, which represents User DAO
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 public class UserDAOImpl {
+    /**
+     * Instance of Logger
+     */
     private static final Logger log = Logger.getLogger(UserDAOImpl.class);
-
+    /**
+     * Find all users
+     * @return list of users
+     */
     public  List<User> findAll() {
         List<User> result = new ArrayList<User>();
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -34,7 +44,10 @@ public class UserDAOImpl {
 
         return result;
     }
-
+    /**
+     * Find user by email and password
+     * @return corresponding user
+     */
     public  User findByEmailAndPass(String email, String password) {
         User user = null;
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -56,7 +69,9 @@ public class UserDAOImpl {
         }
         return user;
     }
-
+    /**
+     * Insert new user in database
+     */
     public  void insert(User user) {
 
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -74,7 +89,10 @@ public class UserDAOImpl {
         }
 
     }
-
+    /**
+     * Find user by id
+     * @return corresponding user
+     */
     public  User findById(int id) {
         User user = null;
         try(Connection connection = ConnectionPool.getConnection()) {

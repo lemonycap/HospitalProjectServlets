@@ -5,8 +5,17 @@ import hospital.utils.doctorcommands.*;
 import hospital.utils.nursecommands.NurseDoPrescrCommand;
 import hospital.utils.nursecommands.NurseFindPatientsCommand;
 import hospital.utils.nursecommands.NursePageCommand;
-
+/**
+ * Class, which represents factory of commands.
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 public class CommandFactory {
+    /**
+     * Method which creates command, based on incoming url
+     * @param url incoming url
+     * @return created command to perform
+     */
     public static ServletCommand createCommand(String url)
     {
         ServletCommand command = null;

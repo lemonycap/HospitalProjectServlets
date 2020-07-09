@@ -1,6 +1,7 @@
 package hospital.utils.nursecommands;
 
 import hospital.utils.RandomPatient;
+import hospital.utils.doctorcommands.CreateDiagnosisCommand;
 import hospital.utils.factories.ServletCommand;
 import org.apache.log4j.Logger;
 
@@ -9,18 +10,42 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Class, which represents creating of patients command.
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 public class NurseFindPatientsCommand implements ServletCommand {
+    /**
+     * Instance of Logger
+     */
+    private static final Logger log = Logger.getLogger(NurseFindPatientsCommand.class);
+    /**
+     * Instance of RandomPatient which is used to define nurse's patients
+     */
     RandomPatient randomPatientClass;
-
+    /**
+     * Constructor for creating new object,used for testing
+     * @see NurseFindPatientsCommand(RandomPatient)
+     */
     public NurseFindPatientsCommand() {
          randomPatientClass = new RandomPatient();
     }
-
+    /**
+     * Constructor for creating new object,used for testing
+     * @see NurseFindPatientsCommand()
+     */
     public NurseFindPatientsCommand(RandomPatient randomPatient) {
         this.randomPatientClass = randomPatient;
     }
 
-    private static final Logger log = Logger.getLogger(NurseFindPatientsCommand.class);
+    /**
+     * Execute command method
+     * @param request HttpRequest
+     * @param response HttpResponse
+     * @throws ServletException on servlet exception
+     * @throws IOException on error occurred while processing the request
+     */
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {

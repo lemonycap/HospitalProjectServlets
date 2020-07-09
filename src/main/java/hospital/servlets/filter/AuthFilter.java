@@ -2,6 +2,7 @@ package hospital.servlets.filter;
 
 import hospital.dao.impl.*;
 import hospital.entity.User;
+import hospital.servlets.patientServlets.PatientPageServlet;
 import hospital.utils.PasswordEncryptorSHA256;
 
 import javax.servlet.*;
@@ -16,28 +17,60 @@ import hospital.utils.factories.DAOFactory;
 import org.apache.log4j.Logger;
 
 import static java.util.Objects.nonNull;
-
+/**
+ * Class, which represents authentication filter.
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 @WebFilter("/login")
 
 public class AuthFilter implements Filter {
-
+    /**
+     * Instance of Logger
+     */
     private static final Logger log = Logger.getLogger(AuthFilter.class);
+    /**
+     * Instance of User DAO
+     */
     UserDAOImpl userDAO;
+    /**
+     * Instance of DAO factory
+     */
     DAOFactory factory;
+    /**
+     * Constructor for creating new object
+     * @see AuthFilter(DAOFactory)
+     */
     public AuthFilter () {
         this.factory = new DAOFactory();
         userDAO = factory.createUserDao();
     }
-
+    /**
+     * Constructor for creating new object
+     * @see AuthFilter()
+     */
     public AuthFilter(DAOFactory daoFactory) {
         this.factory = daoFactory;
         userDAO = factory.createUserDao();
     }
 
+    /**
+     * Init filter method
+     * @param filterConfig filter config
+     * @throws ServletException on servlet error
+     */
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
     }
 
+    /**
+     * Method which perfoms filtering
+     * @param request HttpRequest
+     * @param response HttpResponse
+     * @param chain FilterChain instance
+     * @throws IOException on error of performing filtering
+     * @throws ServletException on servlet error
+     */
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         try {
@@ -79,12 +112,23 @@ public class AuthFilter implements Filter {
         }
     }
 
-
+    /**
+     * On case of calling this method, doFilter method will not perform again on current instance
+     */
         @Override
     public void destroy() {
 
     }
 
+    /**
+     * Method which defines on which page user will be redirected
+     * @param req HttpRequest
+     * @param res HttpResponse
+     * @param loginCheck boolean which defines if user successfully signed in or not
+     * @param role role of user
+     * @throws ServletException on servlet error
+     * @throws IOException on error occured while processing the request
+     */
     private void sendToMenu (final HttpServletRequest req,
                              final HttpServletResponse res,
                              boolean loginCheck,String role)  throws ServletException, IOException {

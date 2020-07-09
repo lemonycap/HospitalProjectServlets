@@ -8,10 +8,20 @@ import org.apache.log4j.Logger;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Class, which represents Prescription DAO
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 public class PrescriptionDAOImpl {
+    /**
+     * Instance of Logger
+     */
     private static final Logger log = Logger.getLogger(PrescriptionDAOImpl.class);
-
+    /**
+     * Find all prescriptions
+     * @return list of prescriptions
+     */
     public  List<Prescription> findAll() {
         List<Prescription> result = new ArrayList<Prescription>();
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -30,7 +40,10 @@ public class PrescriptionDAOImpl {
         }
         return result;
     }
-
+    /**
+     * Find prescription by id
+     * @return corresponding prescription
+     */
     public  Prescription findById(int id) {
         Prescription prescription = null;
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -49,7 +62,10 @@ public class PrescriptionDAOImpl {
     }
 
 
-
+    /**
+     * Find patients prescription history
+     * @return prescription history - list of prescriptions id
+     */
     public  List<Integer> findByPatientHistory(int id) {
         List<Integer> result = new ArrayList<Integer>();
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -65,7 +81,10 @@ public class PrescriptionDAOImpl {
         }
         return result;
     }
-
+    /**
+     * Find patients new prescriptions
+     * @return new prescriptions - list of prescriptions id
+     */
     public  List<Integer> findByActivePrescriptions(int id) {
         List<Integer> result = new ArrayList<Integer>();
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -82,7 +101,10 @@ public class PrescriptionDAOImpl {
         return result;
     }
 
-
+    /**
+     * Find prescription by prescription class
+     * @return list of corresponding prescriptions
+     */
     public  List<Prescription> findByClass(String prescriptionClass) {
         List<Prescription> result = new ArrayList<Prescription>();
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -102,7 +124,9 @@ public class PrescriptionDAOImpl {
         }
         return result;
     }
-
+    /**
+     * Insert patient's history in table
+     */
     public  void insertHistory(int prescriptionId, int patientId) {
 
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -116,7 +140,9 @@ public class PrescriptionDAOImpl {
         }
 
     }
-
+    /**
+     * Insert new prescriptions for patient in table
+     */
     public  void insertNewPrescriptions(int prescriptionId, int patientId) {
 
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -129,7 +155,9 @@ public class PrescriptionDAOImpl {
             log.error("Error",throwables);
         }
     }
-
+    /**
+     * Delete prescription for particular patient
+     */
     public  void delete(int id,int patientId) {
         try(Connection connection = ConnectionPool.getConnection()) {
             PreparedStatement statement = connection.prepareStatement(PrescriptionQueries.DELETE_PRESCRIPTION);

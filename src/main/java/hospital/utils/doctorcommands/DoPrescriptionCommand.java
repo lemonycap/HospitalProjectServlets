@@ -11,17 +11,43 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class DoPrescriptionCommand implements ServletCommand {
-    private static final Logger log = Logger.getLogger(DoPrescriptionCommand.class);
+/**
+ * Class, which represents performing of the diagnosis command.
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 
+public class DoPrescriptionCommand implements ServletCommand {
+    /**
+     * Instance of Logger
+     */
+    private static final Logger log = Logger.getLogger(DoPrescriptionCommand.class);
+    /**
+     * Instance of DAO factory
+     */
     DAOFactory factory;
+    /**
+     * Constructor for creating new object
+     * @see DoPrescriptionCommand(DAOFactory)
+     */
     public DoPrescriptionCommand() {
         this.factory = new DAOFactory();
     }
+    /**
+     * Constructor for creating new object
+     * @see DoPrescriptionCommand()
+     */
     public DoPrescriptionCommand(DAOFactory factory) {
         this.factory = factory;
     }
 
+    /**
+     * Execute command method
+     * @param request HttpRequest
+     * @param response HttpResponse
+     * @throws ServletException on servlet exception
+     * @throws IOException on error occured while processing the request
+     */
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {

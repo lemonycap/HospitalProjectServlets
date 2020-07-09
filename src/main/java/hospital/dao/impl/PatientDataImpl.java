@@ -8,10 +8,20 @@ import org.apache.log4j.Logger;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Class, which represents PatientData DAO
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 public class PatientDataImpl {
+    /**
+     * Instance of Logger
+     */
     private static final Logger log = Logger.getLogger(PatientDataImpl.class);
-
+    /**
+     * Find patient data by patient id
+     * @return corresponding patient info
+     */
     public  PatientData findByPatientId(int id) {
         PatientData patientData = null;
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -31,6 +41,10 @@ public class PatientDataImpl {
         }
         return patientData;
     }
+    /**
+     * Find existing doctor's patients by doctor id
+     * @return list of patients
+     */
     public  List<PatientData> findDoctorPatients(int id) {
         List<PatientData> result = new ArrayList<PatientData>();
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -52,7 +66,10 @@ public class PatientDataImpl {
         }
         return result;
     }
-
+    /**
+     * Find existing nurse's patients by nurse id
+     * @return list of patients
+     */
     public  List<PatientData> findNursePatients(int id) {
         List<PatientData> result = new ArrayList<PatientData>();
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -74,7 +91,9 @@ public class PatientDataImpl {
         }
         return result;
     }
-
+    /**
+     * Insert new patient to patient_info table
+     */
     public  void insert(int id) {
 
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -87,7 +106,10 @@ public class PatientDataImpl {
         }
 
     }
-
+    /**
+     * Find all patient data in database
+     * @return list of patient data
+     */
     public  List<PatientData> findAll() {
         List<PatientData> result = new ArrayList<PatientData>();
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -109,7 +131,10 @@ public class PatientDataImpl {
 
         return result;
     }
-
+    /**
+     * Find all patients which have no doctor at the moment
+     * @return list of patients
+     */
     public  List<PatientData> findAllWhereNoDoc() {
         List<PatientData> result = new ArrayList<PatientData>();
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -131,7 +156,10 @@ public class PatientDataImpl {
 
         return result;
     }
-
+    /**
+     * Find all patients which have no nurse at the moment
+     * @return list of patients
+     */
     public  List<PatientData> findAllWhereNoNurse() {
         List<PatientData> result = new ArrayList<PatientData>();
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -153,7 +181,9 @@ public class PatientDataImpl {
 
         return result;
     }
-
+    /**
+     * Appoint doctor to the patient
+     */
     public  void updateDoctor(int doctorId, int patientId) {
 
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -165,7 +195,9 @@ public class PatientDataImpl {
              log.error("Error",throwables);
         }
     }
-
+    /**
+     * Appoint nurse to the patient
+     */
     public  void updateNurse(int nurseId, int patientId) {
 
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -177,7 +209,9 @@ public class PatientDataImpl {
             log.error("Error",throwables);
         }
     }
-
+    /**
+     * Appoint diagnosis to the patient
+     */
     public  void updateDiagnosis(int diagnosisId, int patientId) {
 
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -190,7 +224,9 @@ public class PatientDataImpl {
         }
     }
 
-
+    /**
+     * Change status of the patient.
+     */
     public  void updatePatientStatus(int id) {
 
         try(Connection connection = ConnectionPool.getConnection()) {

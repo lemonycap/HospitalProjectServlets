@@ -4,6 +4,7 @@ import hospital.dao.impl.DiagnosisDAOImpl;
 import hospital.dao.impl.PatientDataImpl;
 import hospital.entity.PatientData;
 import hospital.entity.diagnosis.Diagnosis;
+import hospital.servlets.patientServlets.PatientPageServlet;
 import hospital.utils.factories.DAOFactory;
 import hospital.utils.RandomNumber;
 import hospital.utils.factories.ServletCommand;
@@ -15,17 +16,44 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Class, which represents creating of the diagnosis command.
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
+
 public class CreateDiagnosisCommand implements ServletCommand {
+    /**
+     * Instance of Logger
+     */
     private static final Logger log = Logger.getLogger(CreateDiagnosisCommand.class);
+    /**
+     * Instance of DAO factory
+     */
     DAOFactory factory;
+    /**
+     * Constructor for creating new object
+     * @see CreateDiagnosisCommand(DAOFactory)
+     */
     public CreateDiagnosisCommand() {
         this.factory = new DAOFactory();
     }
 
+    /**
+     * Constructor for creating new object,used for testing
+     * @see CreateDiagnosisCommand()
+     */
     public CreateDiagnosisCommand(DAOFactory factory) {
         this.factory = factory;
     }
 
+    /**
+     * Execute command method
+     * @param request HttpRequest
+     * @param response HttpResponse
+     * @throws ServletException on servlet exception
+     * @throws IOException on error occured while processing the request
+     */
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {

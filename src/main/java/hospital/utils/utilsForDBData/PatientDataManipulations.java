@@ -15,14 +15,38 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class PatientDataManipulations {
+/**
+ * Class, which used for operations with patient data.
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 
+public class PatientDataManipulations {
+    /**
+     * Instance of DAO factory
+     */
     DAOFactory factory;
+    /**
+     * Instance of user DAO
+     */
     UserDAOImpl userDAO;
+    /**
+     * Instance of patient data DAO
+     */
     PatientDataImpl patientDataImpl;
+    /**
+     * Instance of prescription DAO
+     */
     PrescriptionDAOImpl prescriptionDAO;
+    /**
+     * Instance of diagnosis DAO
+     */
     DiagnosisDAOImpl diagnosisDAO;
 
+    /**
+     * Constructor for creating new object.
+     * @see PatientDataManipulations(DAOFactory)
+     */
     public PatientDataManipulations() {
         this.factory = new DAOFactory();
         userDAO = factory.createUserDao();
@@ -30,7 +54,10 @@ public class PatientDataManipulations {
         prescriptionDAO = factory.createPrescriptionDao();
         diagnosisDAO = factory.createDiagnosisDao();
     }
-
+    /**
+     * Constructor for creating new object.
+     * @see PatientDataManipulations()
+     */
     public PatientDataManipulations(DAOFactory factory) {
         this.factory = factory;
         userDAO = factory.createUserDao();
@@ -39,16 +66,27 @@ public class PatientDataManipulations {
         diagnosisDAO = factory.createDiagnosisDao();
     }
 
+    /**
+     * Method which defines user by id
+     * @param id id of user
+     * @return corresponding instance of User class
+     */
     public User detectPerson(int id) {
         return userDAO.findById(id);
     }
 
-
+    /**
+     * Method which defines diagnosis by id
+     * @param id id of user
+     * @return corresponding instance of Diagnosis class
+     */
     public Diagnosis detectDiagnosis(int id) {
         return diagnosisDAO.findById(id);
     }
 
-
+    /**
+     * Method which checks that all patient data is present in the database
+     */
     public void refreshPatients() {
 
         List<User> users = userDAO.findAll();
@@ -63,7 +101,9 @@ public class PatientDataManipulations {
         }
 
     }
-
+    /**
+     * Method which checks that all patients have their prescription history
+     */
     public  void checkPrescriptionHistory() {
         List<PatientData> allPatients = patientDataImpl.findAll();
         for (int i = 0; i < allPatients.size(); i++) {
@@ -72,7 +112,9 @@ public class PatientDataManipulations {
             }
         }
     }
-
+    /**
+     * Method which creates prescription history in case of absence
+     */
     public  void createPatientHistory(int patientId) {
         List<Prescription> allPrescriptions = prescriptionDAO.findAll();
         int numberOfPrescriptionsToInsert = RandomNumber.randNumber(0,3);
@@ -82,7 +124,9 @@ public class PatientDataManipulations {
             prescriptionDAO.insertHistory(allPrescriptions.get(numberOfPrescr).getId(),patientId);
         }
     }
-
+    /**
+     * Method which defines which prescriptions are necessary for patient based on his/her diagnosis
+     */
     public  void makePrescriptions(PatientData patientData) {
         Set<Prescription> history = findPatientHistory(patientData.getPatient().getId());
         List<Prescription> medicine = prepareActivePrescriptions(history,prescriptionDAO.findByClass("medicine"));
@@ -111,7 +155,9 @@ public class PatientDataManipulations {
         }
 
     }
-
+    /**
+     * Method which removes prescriptions that patient has already tried
+     */
     public List<Prescription> prepareActivePrescriptions(Set<Prescription> pastPrescriptions, List<Prescription> listToPrepare) {
         List<Prescription> newList = listToPrepare;
         for (int i = 0; i < listToPrepare.size(); i++) {
@@ -122,6 +168,11 @@ public class PatientDataManipulations {
         return newList;
     }
 
+    /**
+     * Finds prescription history in database
+     * @param patientId id of patient
+     * @return prescription history of patient
+     */
     public  Set<Prescription> findPatientHistory(int patientId) {
         List<Integer> numbersOfPrescriptions = prescriptionDAO.findByPatientHistory(patientId);
         Set<Prescription> prescriptions = new HashSet<>();
@@ -130,7 +181,11 @@ public class PatientDataManipulations {
         }
         return prescriptions;
     }
-
+    /**
+     * Finds new prescriptions in database
+     * @param patientId id of patient
+     * @return new prescriptions for patient
+     */
     public  Set<Prescription> findNewPrescriptions(int patientId) {
         List<Integer> numbersOfPrescriptions = prescriptionDAO.findByActivePrescriptions(patientId);
         Set<Prescription> prescriptions = new HashSet<>();

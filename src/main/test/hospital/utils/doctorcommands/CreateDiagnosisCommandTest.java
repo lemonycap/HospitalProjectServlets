@@ -23,7 +23,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Class for testing of creating diagnosis for patient
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 @RunWith(MockitoJUnitRunner.class)
 public class CreateDiagnosisCommandTest {
     @Mock
@@ -64,6 +68,11 @@ public class CreateDiagnosisCommandTest {
         dispatcher = null;
     }
 
+    /**
+     * Testing of correct command execution
+     * @throws ServletException
+     * @throws IOException
+     */
     @Test
     public void execute() throws ServletException, IOException {
         Mockito.when(daoFactory.createDiagnosisDao()).thenReturn(diagnosisDAO);
@@ -77,7 +86,11 @@ public class CreateDiagnosisCommandTest {
         createDiagnosisCommand.execute(request,response);
         verify(context, times(1)).getRequestDispatcher("/doctorPage");
     }
-
+    /**
+     * Testing of method work with passing to it null value of id parameter
+     * @throws ServletException
+     * @throws IOException
+     */
     @Test (expected = NumberFormatException.class)
     public void exceptionExecute() throws  ServletException,IOException {
         Integer integer = null;

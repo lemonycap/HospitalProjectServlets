@@ -9,9 +9,20 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+/**
+ * Class, which represents Role DAO
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 public class RoleDAOImpl {
+    /**
+     * Instance of Logger
+     */
     private static final Logger log = Logger.getLogger(RoleDAOImpl.class);
+    /**
+     * Find role by id
+     * @return corresponding role
+     */
     public  Role findById(int id) {
         Role role = null;
         try(Connection connection = ConnectionPool.getConnection()) {
@@ -27,7 +38,10 @@ public class RoleDAOImpl {
         }
         return role;
     }
-
+    /**
+     * Find role by name
+     * @return corresponding role
+     */
     public  Role findByName(String name) {
         Role role = null;
         try(Connection connection = ConnectionPool.getConnection()) {

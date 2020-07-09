@@ -9,9 +9,20 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * Class, which represents log out servlet.
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 @WebServlet ("/logout")
-
 public class LogoutServlet extends HttpServlet {
+    /**
+     * Method performing HTTP GET request
+     * @param req HttpRequest
+     * @param resp HttpResponse
+     * @throws ServletException On servlet error
+     * @throws IOException On error fulfilling the request
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {

@@ -5,6 +5,7 @@ import hospital.dao.impl.UserDAOImpl;
 import hospital.entity.PatientData;
 import hospital.entity.User;
 import hospital.utils.PasswordEncryptorSHA256;
+import hospital.utils.doctorcommands.CreateDiagnosisCommand;
 import hospital.utils.factories.DAOFactory;
 import hospital.utils.factories.ServletCommand;
 import org.apache.log4j.Logger;
@@ -15,18 +16,42 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
-
+/**
+ * Class, which represents nurse page command.
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 public class NursePageCommand implements ServletCommand {
+    /**
+     * Instance of Logger
+     */
     private static final Logger log = Logger.getLogger(NursePageCommand.class);
+    /**
+     * Instance of DAO factory
+     */
     DAOFactory factory;
+    /**
+     * Constructor for creating new object
+     * @see NursePageCommand(DAOFactory)
+     */
     public NursePageCommand () {
         factory = new DAOFactory();
     }
-
+    /**
+     * Constructor for creating new object
+     * @see NursePageCommand()
+     */
     public NursePageCommand (DAOFactory factory) {
         this.factory = factory;
     }
 
+    /**
+     * Execute command method
+     * @param request HttpRequest
+     * @param response HttpResponse
+     * @throws ServletException on servlet exception
+     * @throws IOException on error occured while processing the request
+     */
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {

@@ -13,12 +13,27 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+/**
+ * Class, which represents doctor page servlet.
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
+
 @WebServlet ("/doctorPage/*")
 
 public class DoctorPageServlet extends HttpServlet {
-
+    /**
+     * Instance of Logger
+     */
     private static final Logger log = Logger.getLogger(DoctorPageServlet.class);
 
+    /**
+     * Method performing HHTP POST request
+     * @param request HttpRequest
+     * @param response HttpResponse
+     * @throws ServletException On servlet error
+     * @throws IOException On error fulfilling the request
+     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 

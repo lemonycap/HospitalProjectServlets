@@ -15,19 +15,42 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
-
+/**
+ * Class, which represents  doctor page command.
+ * @author Yelyzaveta Onyshchenko
+ * @version 1.01
+ */
 public class DoctorPageCommand implements ServletCommand {
+    /**
+     * Instance of Logger
+     */
     private static final Logger log = Logger.getLogger(DoctorPageCommand.class);
+    /**
+     * Instance of DAO factory
+     */
     DAOFactory factory;
-
+    /**
+     * Constructor for creating new object
+     * @see DoctorPageCommand(DAOFactory)
+     */
     public DoctorPageCommand() {
         this.factory = new DAOFactory();
     }
-
+    /**
+     * Constructor for creating new object
+     * @see DoctorPageCommand()
+     */
     public DoctorPageCommand(DAOFactory factory) {
         this.factory = factory;
     }
 
+    /**
+     * Execute command method
+     * @param request HttpRequest
+     * @param response HttpResponse
+     * @throws ServletException on servlet exception
+     * @throws IOException on error occured while processing the request
+     */
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
