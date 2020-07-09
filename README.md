@@ -3,6 +3,10 @@
 ## Task description
 Система Больница. Врач определяет диагноз, делает назначение Пациенту (процедуры, лекарства, операции). Назначение может выполнить Медсестра (процедуры, лекарства) или Врач (любое назначение). Пациент может быть выписан из Больницы, при этом фиксируется окончательный диагноз.
 
+## Project documentation
+Check file [https://github.com/lemonycap/HospitalProjectServlets/blob/master/systemHospital.pdf]. 
+Documentation generated using Doxygen.
+
 ## How to install
 Clone this repository: in your command line enter git clone https://github.com/lemonycap/HospitalProjectServlets.git
 
