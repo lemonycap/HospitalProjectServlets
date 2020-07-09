@@ -48,6 +48,30 @@ public class User {
     }
 
 
+    public User (int id, String name, String surname, String email, String password, int role,UserDataManipulations userDataManipulations1) {
+        userDataManipulations = userDataManipulations1;
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.password = password;
+        this.role = userDataManipulations.detectRole(role);
+    }
+
+    public User (String name, String surname, String email, String password, int role,UserDataManipulations userDataManipulations1) {
+        userDataManipulations = userDataManipulations1;
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        try {
+            this.password = PasswordEncryptorSHA256.encryptPasswordWithSHA256(password);
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        this.role = userDataManipulations.detectRole(role);
+    }
+
+
     public int getId() {
         return id;
     }
