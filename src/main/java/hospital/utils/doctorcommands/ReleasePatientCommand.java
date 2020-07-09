@@ -3,8 +3,8 @@ package hospital.utils.doctorcommands;
 import hospital.dao.impl.PatientDataImpl;
 import hospital.entity.PatientData;
 import hospital.entity.prescription.Prescription;
-import hospital.utils.DAOFactory;
-import hospital.utils.ServletCommand;
+import hospital.utils.factories.DAOFactory;
+import hospital.utils.factories.ServletCommand;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;

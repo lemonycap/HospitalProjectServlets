@@ -2,6 +2,7 @@ package hospital.utils;
 
 import hospital.dao.impl.PatientDataImpl;
 import hospital.entity.PatientData;
+import hospital.utils.factories.DAOFactory;
 import org.apache.log4j.Logger;
 
 import java.util.List;

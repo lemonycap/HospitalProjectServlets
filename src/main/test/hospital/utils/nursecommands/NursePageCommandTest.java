@@ -4,7 +4,7 @@ import hospital.dao.impl.PatientDataImpl;
 import hospital.dao.impl.UserDAOImpl;
 import hospital.entity.PatientData;
 import hospital.entity.User;
-import hospital.utils.DAOFactory;
+import hospital.utils.factories.DAOFactory;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

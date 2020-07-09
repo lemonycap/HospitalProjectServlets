@@ -1,14 +1,12 @@
 package hospital.utils;
 
 import hospital.utils.doctorcommands.*;
+import hospital.utils.factories.CommandFactory;
+import hospital.utils.factories.ServletCommand;
 import hospital.utils.nursecommands.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mock;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import static org.junit.Assert.*;
 

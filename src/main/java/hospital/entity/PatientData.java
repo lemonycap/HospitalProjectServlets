@@ -2,7 +2,7 @@ package hospital.entity;
 
 import hospital.entity.diagnosis.Diagnosis;
 import hospital.entity.prescription.Prescription;
-import hospital.utils.PatientDataManipulations;
+import hospital.utils.utilsForDBData.PatientDataManipulations;
 
 import java.util.Set;
 

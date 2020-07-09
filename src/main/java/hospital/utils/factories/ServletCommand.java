@@ -1,4 +1,4 @@
-package hospital.utils;
+package hospital.utils.factories;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;

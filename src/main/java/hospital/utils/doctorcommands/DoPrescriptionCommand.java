@@ -1,8 +1,8 @@
 package hospital.utils.doctorcommands;
 
 import hospital.dao.impl.PrescriptionDAOImpl;
-import hospital.utils.DAOFactory;
-import hospital.utils.ServletCommand;
+import hospital.utils.factories.DAOFactory;
+import hospital.utils.factories.ServletCommand;
 import hospital.utils.SingleTransaction;
 import org.apache.log4j.Logger;
 

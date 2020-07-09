@@ -4989,3 +4989,300 @@ java.lang.NullPointerException
 2020-07-09 01:25:30 INFO  AuthFilter:45 - User already logged in
 2020-07-09 01:25:30 INFO  AuthFilter:87 - User successfully loged in as a nurse
 2020-07-09 01:25:30 INFO  NursePageCommand:44 - Redicrecting to nurse page
+2020-07-09 02:13:50 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:14:07 INFO  AuthFilter:94 - User successfully loged in as a doctor
+2020-07-09 02:15:58 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:15:58 INFO  AuthFilter:94 - User successfully loged in as a doctor
+2020-07-09 02:17:43 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:17:43 INFO  AuthFilter:98 - User successfully loged in as a nurse
+2020-07-09 02:17:44 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:17:44 INFO  AuthFilter:94 - User successfully loged in as a doctor
+2020-07-09 02:17:44 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:17:44 INFO  AuthFilter:94 - User successfully loged in as a doctor
+2020-07-09 02:18:42 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:18:42 INFO  AuthFilter:94 - User successfully loged in as a doctor
+2020-07-09 02:19:39 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:19:39 INFO  AuthFilter:98 - User successfully loged in as a nurse
+2020-07-09 02:19:40 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:19:40 INFO  AuthFilter:94 - User successfully loged in as a doctor
+2020-07-09 02:19:40 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:19:40 INFO  AuthFilter:94 - User successfully loged in as a doctor
+2020-07-09 02:21:47 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:21:47 INFO  AuthFilter:98 - User successfully loged in as a nurse
+2020-07-09 02:21:47 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:21:47 INFO  AuthFilter:94 - User successfully loged in as a doctor
+2020-07-09 02:21:47 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:21:47 INFO  AuthFilter:102 - User successfully loged in as a patient
+2020-07-09 02:22:28 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:22:28 INFO  AuthFilter:98 - User successfully loged in as a nurse
+2020-07-09 02:23:07 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:23:07 INFO  AuthFilter:98 - User successfully loged in as a nurse
+2020-07-09 02:23:07 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:23:07 INFO  AuthFilter:94 - User successfully loged in as a doctor
+2020-07-09 02:23:07 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:23:07 INFO  AuthFilter:102 - User successfully loged in as a patient
+2020-07-09 02:31:50 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:31:50 INFO  AuthFilter:98 - User successfully loged in as a nurse
+2020-07-09 02:31:50 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:31:50 INFO  AuthFilter:94 - User successfully loged in as a doctor
+2020-07-09 02:31:50 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:31:50 INFO  AuthFilter:102 - User successfully loged in as a patient
+2020-07-09 02:32:13 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:32:13 INFO  AuthFilter:98 - User successfully loged in as a nurse
+2020-07-09 02:32:13 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:32:13 INFO  AuthFilter:94 - User successfully loged in as a doctor
+2020-07-09 02:32:13 DEBUG AuthFilter:68 - Active user is Ben Smith
+2020-07-09 02:32:13 INFO  AuthFilter:102 - User successfully loged in as a patient
+2020-07-09 03:06:41 INFO  PatientPageServlet:36 - Patient page
+2020-07-09 03:06:41 DEBUG PatientPageServlet:46 - Active patient isBenSmith
+2020-07-09 03:06:41 INFO  PatientPageServlet:49 - Redirecting to patientPage.jsp
+2020-07-09 03:06:41 ERROR PatientPageServlet:53 - An error occured while attempting to enter a patient profile
+java.lang.NullPointerException
+	at hospital.servlets.patientServlets.PatientPageServlet.doPost(PatientPageServlet.java:50)
+	at hospital.servlets.patientServlets.PatientPageServletTest.doPost(PatientPageServletTest.java:87)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-09 03:06:58 INFO  PatientPageServlet:36 - Patient page
+2020-07-09 03:07:14 DEBUG PatientPageServlet:46 - Active patient isBenSmith
+2020-07-09 03:07:18 INFO  PatientPageServlet:49 - Redirecting to patientPage.jsp
+2020-07-09 03:07:47 INFO  PatientPageServlet:36 - Patient page
+2020-07-09 03:08:26 DEBUG PatientPageServlet:46 - Active patient isBenSmith
+2020-07-09 03:08:39 INFO  PatientPageServlet:49 - Redirecting to patientPage.jsp
+2020-07-09 03:09:00 ERROR PatientPageServlet:53 - An error occured while attempting to enter a patient profile
+java.lang.NullPointerException
+	at hospital.servlets.patientServlets.PatientPageServlet.doPost(PatientPageServlet.java:50)
+	at hospital.servlets.patientServlets.PatientPageServletTest.doPost(PatientPageServletTest.java:87)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-09 03:10:44 INFO  PatientPageServlet:36 - Patient page
+2020-07-09 03:10:44 DEBUG PatientPageServlet:46 - Active patient isBenSmith
+2020-07-09 03:10:44 INFO  PatientPageServlet:49 - Redirecting to patientPage.jsp
+2020-07-09 03:10:44 ERROR PatientPageServlet:53 - An error occured while attempting to enter a patient profile
+java.lang.NullPointerException
+	at hospital.servlets.patientServlets.PatientPageServlet.doPost(PatientPageServlet.java:50)
+	at hospital.servlets.patientServlets.PatientPageServletTest.doPost(PatientPageServletTest.java:87)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-09 03:11:15 INFO  PatientPageServlet:36 - Patient page
+2020-07-09 03:11:35 DEBUG PatientPageServlet:46 - Active patient isBenSmith
+2020-07-09 03:11:37 INFO  PatientPageServlet:49 - Redirecting to patientPage.jsp
+2020-07-09 03:11:45 ERROR PatientPageServlet:53 - An error occured while attempting to enter a patient profile
+java.lang.NullPointerException
+	at hospital.servlets.patientServlets.PatientPageServlet.doPost(PatientPageServlet.java:50)
+	at hospital.servlets.patientServlets.PatientPageServletTest.doPost(PatientPageServletTest.java:87)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-09 03:12:30 INFO  PatientPageServlet:36 - Patient page
+2020-07-09 03:12:30 DEBUG PatientPageServlet:46 - Active patient isBenSmith
+2020-07-09 03:12:30 INFO  PatientPageServlet:49 - Redirecting to patientPage.jsp
+2020-07-09 03:12:30 ERROR PatientPageServlet:53 - An error occured while attempting to enter a patient profile
+java.lang.NullPointerException
+	at hospital.servlets.patientServlets.PatientPageServlet.doPost(PatientPageServlet.java:50)
+	at hospital.servlets.patientServlets.PatientPageServletTest.doPost(PatientPageServletTest.java:87)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-09 03:13:05 INFO  PatientPageServlet:36 - Patient page
+2020-07-09 03:13:05 DEBUG PatientPageServlet:46 - Active patient isBenSmith
+2020-07-09 03:13:05 INFO  PatientPageServlet:49 - Redirecting to patientPage.jsp
+2020-07-09 03:15:06 INFO  PatientPageServlet:36 - Patient page
+2020-07-09 03:15:06 INFO  PatientPageServlet:49 - Redirecting to patientPage.jsp
+2020-07-09 03:15:34 INFO  PatientPageServlet:36 - Patient page
+2020-07-09 03:15:34 INFO  PatientPageServlet:49 - Redirecting to patientPage.jsp
+2020-07-09 03:15:34 ERROR PatientPageServlet:53 - An error occured while attempting to enter a patient profile
+java.lang.NullPointerException
+	at hospital.servlets.patientServlets.PatientPageServlet.doPost(PatientPageServlet.java:50)
+	at hospital.servlets.patientServlets.PatientPageServletTest.unvalidUserExceptionTest(PatientPageServletTest.java:105)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.mockito.internal.runners.DefaultInternalRunner$1$1.evaluate(DefaultInternalRunner.java:46)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.mockito.internal.runners.DefaultInternalRunner$1.run(DefaultInternalRunner.java:77)
+	at org.mockito.internal.runners.DefaultInternalRunner.run(DefaultInternalRunner.java:83)
+	at org.mockito.internal.runners.StrictRunner.run(StrictRunner.java:39)
+	at org.mockito.junit.MockitoJUnitRunner.run(MockitoJUnitRunner.java:163)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)
+2020-07-09 03:16:54 INFO  PatientPageServlet:36 - Patient page
+2020-07-09 03:16:54 INFO  PatientPageServlet:49 - Redirecting to patientPage.jsp
+2020-07-09 03:17:16 INFO  PatientPageServlet:36 - Patient page
+2020-07-09 03:17:42 INFO  PatientPageServlet:36 - Patient page
+2020-07-09 03:18:25 INFO  PatientPageServlet:36 - Patient page
+2020-07-09 03:18:25 DEBUG PatientPageServlet:46 - Active patient isBenSmith
+2020-07-09 03:18:25 INFO  PatientPageServlet:48 - Redirecting to patientPage.jsp
+2020-07-09 03:18:25 INFO  PatientPageServlet:36 - Patient page
+2020-07-09 03:19:29 INFO  PatientPageServlet:36 - Patient page
+2020-07-09 03:19:29 DEBUG PatientPageServlet:46 - Active patient isBenSmith
+2020-07-09 03:19:29 INFO  PatientPageServlet:49 - Redirecting to patientPage.jsp

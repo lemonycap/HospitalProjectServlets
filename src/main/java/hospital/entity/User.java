@@ -1,8 +1,7 @@
 package hospital.entity;
 
-import hospital.dao.impl.RoleDAOImpl;
 import hospital.utils.PasswordEncryptorSHA256;
-import hospital.utils.UserDataManipulations;
+import hospital.utils.utilsForDBData.UserDataManipulations;
 
 import java.security.NoSuchAlgorithmException;
 

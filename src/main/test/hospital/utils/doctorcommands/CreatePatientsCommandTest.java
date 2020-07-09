@@ -3,9 +3,8 @@ package hospital.utils.doctorcommands;
 import hospital.dao.impl.PatientDataImpl;
 import hospital.entity.PatientData;
 import hospital.entity.User;
-import hospital.utils.DAOFactory;
+import hospital.utils.factories.DAOFactory;
 import hospital.utils.RandomPatient;
-import hospital.utils.nursecommands.NurseFindPatientsCommand;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,7 +22,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 import static org.mockito.Mockito.times;

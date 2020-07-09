@@ -4,7 +4,7 @@ import hospital.dao.impl.PatientDataImpl;
 import hospital.dao.impl.UserDAOImpl;
 import hospital.entity.PatientData;
 import hospital.entity.User;
-import hospital.utils.DAOFactory;
+import hospital.utils.factories.DAOFactory;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -39,7 +39,6 @@ public class PatientPageServlet extends HttpServlet {
             HttpSession session = request.getSession();
             String email = String.valueOf(session.getAttribute("email"));
             String password = (String.valueOf(session.getAttribute("password")));
-            String url = String.valueOf(request.getRequestURL());
             User activePatient = userDAO.findByEmailAndPass(email, password);
             if (activePatient != null) {
                 request.setAttribute("patient", activePatient);
@@ -48,11 +47,11 @@ public class PatientPageServlet extends HttpServlet {
                 request.setAttribute("patient",patientData);
             }
             log.info("Redirecting to patientPage.jsp");
-            getServletContext().getRequestDispatcher("/patientPage.jsp").forward(request, response);
+            request.getServletContext().getRequestDispatcher("/patientPage.jsp").forward(request, response);
         }
         catch(Exception ex) {
             log.error("An error occured while attempting to enter a patient profile",ex);
-            getServletContext().getRequestDispatcher("/error.jsp").forward(request, response);
+            request.getServletContext().getRequestDispatcher("/error.jsp").forward(request, response);
         }
     }
 }

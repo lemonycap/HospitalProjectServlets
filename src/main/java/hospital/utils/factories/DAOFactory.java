@@ -1,6 +1,7 @@
-package hospital.utils;
+package hospital.utils.factories;
 
 import hospital.dao.impl.*;
+import hospital.utils.SingleTransaction;
 
 public class DAOFactory {
     public UserDAOImpl createUserDao() {

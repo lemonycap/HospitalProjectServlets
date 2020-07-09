@@ -4,8 +4,9 @@ import hospital.dao.impl.PatientDataImpl;
 import hospital.dao.impl.UserDAOImpl;
 import hospital.entity.PatientData;
 import hospital.entity.User;
-import hospital.utils.DAOFactory;
-import hospital.utils.ServletCommand;
+import hospital.utils.PasswordEncryptorSHA256;
+import hospital.utils.factories.DAOFactory;
+import hospital.utils.factories.ServletCommand;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -34,7 +35,7 @@ public class NursePageCommand implements ServletCommand {
             HttpSession session = request.getSession();
             String email = String.valueOf(session.getAttribute("email"));
             String password = (String.valueOf(session.getAttribute("password")));
-            User activeNurse = userDAO.findByEmailAndPass(email, password);
+            User activeNurse = userDAO.findByEmailAndPass(email, PasswordEncryptorSHA256.encryptPasswordWithSHA256(password));
             if (activeNurse != null) {
                 request.setAttribute("nurse", activeNurse);
                 log.info("Active nurse:" + activeNurse.getName() + activeNurse.getSurname());

@@ -4,7 +4,7 @@ import hospital.dao.impl.DiagnosisDAOImpl;
 import hospital.dao.impl.PatientDataImpl;
 import hospital.entity.PatientData;
 import hospital.entity.diagnosis.Diagnosis;
-import hospital.utils.DAOFactory;
+import hospital.utils.factories.DAOFactory;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -20,12 +20,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class CreateDiagnosisCommandTest {

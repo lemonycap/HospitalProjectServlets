@@ -4,9 +4,9 @@ import hospital.dao.impl.DiagnosisDAOImpl;
 import hospital.dao.impl.PatientDataImpl;
 import hospital.entity.PatientData;
 import hospital.entity.diagnosis.Diagnosis;
-import hospital.utils.DAOFactory;
+import hospital.utils.factories.DAOFactory;
 import hospital.utils.RandomNumber;
-import hospital.utils.ServletCommand;
+import hospital.utils.factories.ServletCommand;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;

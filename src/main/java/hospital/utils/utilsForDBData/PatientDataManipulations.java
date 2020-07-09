@@ -1,4 +1,4 @@
-package hospital.utils;
+package hospital.utils.utilsForDBData;
 
 import hospital.dao.impl.DiagnosisDAOImpl;
 import hospital.dao.impl.PatientDataImpl;
@@ -8,6 +8,8 @@ import hospital.entity.PatientData;
 import hospital.entity.User;
 import hospital.entity.diagnosis.Diagnosis;
 import hospital.entity.prescription.Prescription;
+import hospital.utils.RandomNumber;
+import hospital.utils.factories.DAOFactory;
 
 import java.util.HashSet;
 import java.util.List;

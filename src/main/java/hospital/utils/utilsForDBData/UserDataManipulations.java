@@ -1,8 +1,9 @@
-package hospital.utils;
+package hospital.utils.utilsForDBData;
 
 import hospital.dao.impl.RoleDAOImpl;
 import hospital.dao.impl.UserDAOImpl;
 import hospital.entity.Role;
+import hospital.utils.factories.DAOFactory;
 
 public class UserDataManipulations {
     DAOFactory factory;

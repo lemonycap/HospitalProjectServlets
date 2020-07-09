@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
+
+import hospital.utils.factories.DAOFactory;
 import org.apache.log4j.Logger;
 
 import static java.util.Objects.nonNull;
@@ -20,8 +22,17 @@ import static java.util.Objects.nonNull;
 public class AuthFilter implements Filter {
 
     private static final Logger log = Logger.getLogger(AuthFilter.class);
-    PatientDataImpl patientData = new PatientDataImpl();
-    UserDAOImpl userDAO = new UserDAOImpl();
+    UserDAOImpl userDAO;
+    DAOFactory factory;
+    public AuthFilter () {
+        this.factory = new DAOFactory();
+        userDAO = factory.createUserDao();
+    }
+
+    public AuthFilter(DAOFactory daoFactory) {
+        this.factory = daoFactory;
+        userDAO = factory.createUserDao();
+    }
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -57,9 +68,9 @@ public class AuthFilter implements Filter {
                     log.debug("Active user is " + activeUser.getName() + " " + activeUser.getSurname());
                 }
 
-                req.getSession().setAttribute("role", activeUser.getRole().getName());
-                req.getSession().setAttribute("email", email);
-                req.getSession().setAttribute("password", password);
+                session.setAttribute("role", activeUser.getRole().getName());
+                session.setAttribute("email", email);
+                session.setAttribute("password", password);
                 sendToMenu(req, res, loginCheck,activeUser.getRole().getName());
             }
 

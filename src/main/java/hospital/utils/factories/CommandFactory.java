@@ -1,15 +1,10 @@
-package hospital.utils;
+package hospital.utils.factories;
 
+import hospital.utils.URLBase;
 import hospital.utils.doctorcommands.*;
 import hospital.utils.nursecommands.NurseDoPrescrCommand;
 import hospital.utils.nursecommands.NurseFindPatientsCommand;
 import hospital.utils.nursecommands.NursePageCommand;
-import org.apache.logging.log4j.core.net.UrlConnectionFactory;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import static hospital.utils.URLBase.*;
 
 public class CommandFactory {
     public static ServletCommand createCommand(String url)

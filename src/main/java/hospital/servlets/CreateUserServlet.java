@@ -3,8 +3,8 @@ package hospital.servlets;
 import hospital.dao.impl.*;
 import hospital.entity.Role;
 import hospital.entity.User;
-import hospital.utils.DAOFactory;
-import hospital.utils.PatientDataManipulations;
+import hospital.utils.factories.DAOFactory;
+import hospital.utils.utilsForDBData.PatientDataManipulations;
 import org.apache.log4j.Logger;
 
 

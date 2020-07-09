@@ -24,7 +24,6 @@ public class LogoutServlet extends HttpServlet {
         session.removeAttribute("name");
         session.removeAttribute("surname");
 
-
         resp.sendRedirect(super.getServletContext().getContextPath() + "/");
     }
 }

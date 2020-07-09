@@ -2,7 +2,7 @@ package hospital.utils.nursecommands;
 
 import hospital.dao.impl.PrescriptionDAOImpl;
 import hospital.entity.prescription.Prescription;
-import hospital.utils.DAOFactory;
+import hospital.utils.factories.DAOFactory;
 import hospital.utils.SingleTransaction;
 import org.junit.After;
 import org.junit.Before;
@@ -22,7 +22,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 import static org.mockito.Mockito.when;

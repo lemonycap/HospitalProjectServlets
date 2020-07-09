@@ -4,9 +4,9 @@ import hospital.dao.impl.PatientDataImpl;
 import hospital.dao.impl.UserDAOImpl;
 import hospital.entity.PatientData;
 import hospital.entity.User;
-import hospital.utils.DAOFactory;
+import hospital.utils.factories.DAOFactory;
 import hospital.utils.PasswordEncryptorSHA256;
-import hospital.utils.ServletCommand;
+import hospital.utils.factories.ServletCommand;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;

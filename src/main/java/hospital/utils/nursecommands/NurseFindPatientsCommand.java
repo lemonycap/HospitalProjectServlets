@@ -1,7 +1,7 @@
 package hospital.utils.nursecommands;
 
 import hospital.utils.RandomPatient;
-import hospital.utils.ServletCommand;
+import hospital.utils.factories.ServletCommand;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;

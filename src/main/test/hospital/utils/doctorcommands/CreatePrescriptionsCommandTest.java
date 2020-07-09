@@ -5,8 +5,8 @@ import hospital.dao.impl.PrescriptionDAOImpl;
 import hospital.entity.PatientData;
 import hospital.entity.diagnosis.Diagnosis;
 import hospital.entity.prescription.Prescription;
-import hospital.utils.DAOFactory;
-import hospital.utils.PatientDataManipulations;
+import hospital.utils.factories.DAOFactory;
+import hospital.utils.utilsForDBData.PatientDataManipulations;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,7 +22,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
 import static org.mockito.ArgumentMatchers.any;
 
 public class CreatePrescriptionsCommandTest {
